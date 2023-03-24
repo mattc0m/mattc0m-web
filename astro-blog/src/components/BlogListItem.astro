@@ -1,0 +1,45 @@
+---
+export interface Props {
+	title: string;
+	date: string;
+	href: string;
+}
+
+const { href, title, date } = Astro.props;
+---
+
+<li class="blog">
+	<a href={href}>
+        <span class="blog-title">{title}</span>
+        <span class="blog-date">{date}</span>
+	</a>
+</li>
+<style lang="scss">
+$text-color-primary: #333131;
+$text-color-muted: #6B6766;
+$secondary-color-accent: #716FD3; 
+
+li.blog {
+	font-size: 16px;
+	line-height: 22px;
+	padding: 0 0 24px;
+	list-style: none;
+	margin: 0;
+
+	a { text-decoration: none; }
+	.blog-title {
+		color: $text-color-primary;
+		font-weight: 500;
+		display: inline-block;
+		text-decoration: underline;
+		text-decoration-color: $secondary-color-accent;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 0.25em;
+	}
+	.blog-date {
+		color: $text-color-muted;
+		font-weight: normal;
+		margin-left: 6px;
+	}
+}
+</style>

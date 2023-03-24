@@ -10,6 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.18"
+    "@astrojs/vue": "^2.1.0",
+    "@fontsource/inter": "^4.5.15",
+    "astro": "^2.1.0",
+    "vue": "^3.2.30"
+  },
+  "devDependencies": {
+    "sass": "^1.59.2"
   }
 }
