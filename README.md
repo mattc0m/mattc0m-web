@@ -3,12 +3,16 @@
 ## Startup
 
 ### Strapi Startup
-```cd cms
-yarn develop```
+```
+cd cms
+yarn develop
+```
 
 ### Astro Startup
-```cd astro-blog
-yarn run dev```
+```
+cd astro-blog
+yarn run dev
+```
 
 ## What's this
 
