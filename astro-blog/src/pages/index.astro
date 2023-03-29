@@ -9,8 +9,13 @@ import TextBlockLarge from '../components/TextBlockLarge.astro';
 	<main>
 		<h1>Hi, I'm Matt Richards</h1>
 
-		<p></p>
+		<p class="intro">I’m a designer who likes coding HTML & CSS, taking <strike>cat</strike> photos, filming videos, sharing Figma tips, and talking about product design.</p>
 
+		<p class="intro">Building websites is my happy place.</p>
+
+		<p class="secondary">Website under construction</p>
+		<p class="secondary">Currently making this project way too complicated.</p>
+			
 		<ul role="list" class="blog-list">
 			<BlogListItem
 				href="https://docs.astro.build/"
@@ -35,10 +40,11 @@ import TextBlockLarge from '../components/TextBlockLarge.astro';
 $text-color-primary: #333131;
 $text-color-muted: #6B6766;
 $secondary-color-accent: #716FD3; 
+
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 540px;
 	}
 	h1 {
 		font-style: normal;
@@ -47,4 +53,15 @@ $secondary-color-accent: #716FD3;
 		line-height: 23px;
 		margin: 0;
 	}
+	ul { margin: 0; padding: 0; }
+	p.intro { 
+		color: $text-color-primary;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 32px;
+		/* or 133% */
+		letter-spacing: 0.02em;
+	}
+	p.secondary { color: $text-color-muted; }
 </style>
