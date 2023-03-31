@@ -3,7 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/BlogListItem.astro';
 import BlogListItem from '../components/BlogListItem.astro';
 import TextBlockLarge from '../components/TextBlockLarge.astro';
+import { Image } from 'astro:assets';
+import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator.png'
 ---
+
+<!-- `alt` is mandatory on the Image component -->---
 
 <Layout title="Matt Richards, Product Designer">
 	<main>
@@ -33,6 +37,13 @@ import TextBlockLarge from '../components/TextBlockLarge.astro';
 				date="January 3, 2023"
 			/>
 		</ul>
+
+		<section class="portfolio">
+			<h2>Portfolio</h2>
+			<a href="#">
+				<Image src={PortfolioEN} alt="Preview of Employee Navigator portfolio" />
+			</a>
+		</section>
 	</main>
 </Layout>
 
@@ -42,7 +53,7 @@ $text-color-muted: #6B6766;
 $secondary-color-accent: #716FD3;
 
 	main {
-		margin: auto;
+		margin: 140px auto;
 		padding: 1.5rem;
 		max-width: 540px;
 	}
@@ -64,4 +75,20 @@ $secondary-color-accent: #716FD3;
 		letter-spacing: 0.02em;
 	}
 	p.secondary { color: $text-color-muted; }
+
+	.portfolio { 
+		margin-top: 3rem;
+		a img {
+			display: block;
+			width: 580px;
+			height: 200px;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.0);
+			transition: box-shadow 0.2s ease-in-out;
+		}
+		a:hover img {
+			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.1);
+		}
+	}
 </style>

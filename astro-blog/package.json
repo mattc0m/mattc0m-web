@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/vue": "^2.1.0",
     "@fontsource/inter": "^4.5.15",
+    "@fontsource/overpass-mono": "^4.5.11",
     "astro": "^2.1.0",
     "vue": "^3.2.30"
   },

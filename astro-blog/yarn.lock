@@ -504,6 +504,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.15.tgz#eed1873d68755d3b52d6fcfcfa3493118430a512"
   integrity sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==
 
+"@fontsource/overpass-mono@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/overpass-mono/-/overpass-mono-4.5.11.tgz#ca5591ada13e205c3bfb914c26a976d749c2532d"
+  integrity sha512-JggIvXo6+Ia6Zs84JkJbpkdp7eJxAQKHywVfGgETdXtW7HPPokFAjzKL3Km8dpAx/WtjJYe84hY3hT+3psgt5A==
+
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz"
