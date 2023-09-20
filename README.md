@@ -14,6 +14,9 @@ cd astro-blog
 yarn run dev
 ```
 
+If having trouble with Codespaces not working, run `yarn run dev --host 0.0.0.0`
+
+
 ## What's this
 
 I'm building my personal website. It will have a functioning, CMS-driven portfolio, photo gallery, blog, and about page.
