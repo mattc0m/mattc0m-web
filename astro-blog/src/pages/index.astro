@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/BlogListItem.astro';
+import Card from '../components/Card.astro';
 import BlogListItem from '../components/BlogListItem.astro';
-import TextBlockLarge from '../components/TextBlockLarge.astro';
 import { Image } from 'astro:assets';
 import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator.png'
 ---
-
 
 <Layout title="Matt Richards, Product Designer">
 	<main>
@@ -18,6 +16,12 @@ import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator.png'
 
 		<p class="secondary">Website under construction</p>
 		<p class="secondary">Currently making this project way too complicated.</p>
+
+		<Card 
+			href="#"
+			title="Title"
+			body="Body"
+		/>
 			
 		<ul role="list" class="blog-list">
 			<BlogListItem
