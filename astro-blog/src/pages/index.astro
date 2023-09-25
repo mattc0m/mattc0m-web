@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import BlogListItem from '../components/BlogListItem.astro';
+import ImageContainer from '../components/ImageContainer.astro';
 import { Image } from 'astro:assets';
 import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator.png'
 ---
@@ -25,10 +26,15 @@ import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator.png'
 			/>
 		</ul>
 
-		<section class="portfolio" style="opacity: 0.5">
-			<h2>Portfolio coming soon</h2>
-			<a href="#">
-			</a>
+		<section class="portfolio">
+			<h2>Portfolio</h2>
+
+			<ImageContainer
+				href="http://www.google.com"
+				title="Employee Navigator"
+				body="2022 - Current">
+			</ImageContainer>
+
 		</section>
 	</main>
 </Layout>
