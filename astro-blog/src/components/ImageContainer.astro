@@ -8,17 +8,22 @@ export interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<a href={href} class="ImageContainer">
-    <div class="TextBlock hasByline">
-        <span class="title">{title}</span>  
-        <span class="byline">{body}</span>
-    </div>		
-    <div class="BackgroundContainer isClipped">
-        <div class="SubImage" id="EN-Thumbnail">
-            <slot />
+<!-- <a href={href} class="ImageContainer"> -->
+    <div class="ImageContainer">
+        <div class="TextBlock hasByline">
+            <span class="title">{title}</span>  
+            <span class="byline">{body}</span>
+        </div>
+        
+        <div class="BackgroundContainer isClipped comingSoon">
+            <span>Coming Soon</span>
+        </div>
+        <div class="BackgroundContainer isClipped">
+            <div class="SubImage" id="EN-Thumbnail">
+                <slot />
+            </div>
         </div>
     </div>
-</a>
 
 <style lang="scss">
     // Codepen: https://codepen.io/mattc0m/pen/dyQByRE
@@ -181,6 +186,28 @@ const { href, title, body } = Astro.props;
         &.onDark {
             .title { color: $basicDark-TextBlock-Title-Color; }
             .byline { color: $basicDark-TextBlock-Byline-Color; }
+        }
+    }
+    .comingSoon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        -webkit-pointer-events: none;
+        opacity: 0;
+        z-index: 5;
+        background: rgba(0,0,0,0.75);
+        top: 0; left: 0;
+        display: flex;
+        color: $basicDark-TextBlock-Title-Color;
+        justify-content: center;
+        align-items: center;
+        transition: background ease-in-out 0.3s, opacity ease-in-out 0.3s;
+    }
+
+    .ImageContainer:hover {
+        .comingSoon {
+            opacity: 1;
         }
     }
 </style>
