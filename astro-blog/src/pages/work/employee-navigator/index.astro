@@ -1,4 +1,5 @@
 ---
+import Logomark from '@assets/images/M-Logomark@2x.png';
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
 import BlogListItem from '@components/BlogListItem.astro';
@@ -11,8 +12,17 @@ import PortfolioElo from '@assets/images/PortfolioCover/Elo@2x.png'
 import PortfolioShadow from '@assets/images/PortfolioCover/Shadow@2x.png'
 ---
 
-<Layout title="Matt Richards, Product Designer">
+<Layout title="Matt Richards - Selected Work - Employee Navigator UX/UI Design">
 	<main>
+
+		<a href="/" class="logomark" title="Return to homepage">
+			<Image src={Logomark} alt="M Logomark, shorthand for Matt Richards" style="object-fit: cover; height: 56px; width: 56px" />
+		</a>
+
+		<div class="breadcrumbs">
+			<a href="/">Home</a> <span class="divider"></span> <a href="/work/">Selected Work</a> <span class="divider"></span> <a href="/work/employee-navigator/">Employee Navigator</a>
+		</div>
+		
 		<h1>Employee Navigator</h1>
 
 		<p class="intro">I'm a designer who likes coding HTML & CSS, taking <strike>cat</strike> photos, filming videos, sharing Figma tips, and talking about product design.</p>
@@ -37,7 +47,7 @@ import PortfolioShadow from '@assets/images/PortfolioCover/Shadow@2x.png'
 				href="/work/employee-navigator/"
 				title="Employee Navigator"
 				body="2022 - Current">
-				<Image src={PortfolioEN} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;" />
+				<Image src={PortfolioEN} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"/>
 			</ImageContainer>
 
 			<ImageContainerDark
@@ -70,6 +80,16 @@ import PortfolioShadow from '@assets/images/PortfolioCover/Shadow@2x.png'
 $text-color-primary: #333131;
 $text-color-muted: #6B6766;
 $secondary-color-accent: #716FD3;
+
+	.logomark { 
+		display: block;
+		width: 56px;
+		height: 56px;
+		background-image: url('{Logomark}');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
 
 	main {
 		margin: 140px auto;
