@@ -1,0 +1,56 @@
+<div class="breadcrumb large">
+  <slot />
+</div>
+
+<style>
+
+:root {
+  --brand-primary: #171717;
+  --ui-padding-default: 50px 42px;
+  --ui-border-radius-default: 12px;
+  --brand-text-tertiary: #9A9A9A;
+}
+
+  .breadcrumb {
+    box-sizing: border-box;
+    display: flex;
+    gap: 4px;
+    color: var(--brand-text-tertiary);
+
+    &.large {
+      font-size: 24px;
+      line-height: 32px; /* 133.333% */
+      letter-spacing: 0.48px;
+    }
+
+    a, div, span {
+      color: var(--text-tertiary, #9A9A9A);
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px; /* 133.333% */
+      letter-spacing: 0.48px;
+      text-decoration: none;
+      text-rendering: optimizeLegibility;
+
+      &.selected {
+        color: var(--brand-primary, #171717);
+      }
+    }
+    .divider {
+      transform: rotate(90deg);
+      font-weight: 300;
+      font-size: 20px;
+      display: flex;
+      height: 32px;
+      width: 32px;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+      left: -4px;
+      user-select: none;
+    }
+  }
+  
+</style>

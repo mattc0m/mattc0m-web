@@ -3,12 +3,18 @@
 </div>
 
 <style lang="scss">
+  :root {
+    --ui-padding-default: 50px 42px;
+    --brand-primary: #171717;
+    --ui-border-radius-default: 12px;
+  }
+
   .TextBlock {
     box-sizing: border-box;
     display: flex;
-    padding: 50px 42px; // needs token (UI-Padding-Default)
-    background: #171717; // needs token (Brand / Primary)
-    border-radius: 12px; // needs token (UI-border-radius-default)
+    padding: var(--ui-padding-default);
+    background: var(--brand-primary);
+    border-radius: var(--ui-border-radius-default);
     color: #F9FAFA;
     font-size: 16px;
     line-height: 22px;

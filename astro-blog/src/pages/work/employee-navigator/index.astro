@@ -1,7 +1,7 @@
 ---
 import Logomark from '@assets/images/M-Logomark@2x.png';
-import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
+import PortfolioItem from '@layouts/PortfolioLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
 import BlogListItem from '@components/BlogListItem.astro';
 import ImageContainer from '@components/ImageContainer.astro';
 import ImageContainerDark from '@components/ImageContainerDark.astro';
@@ -9,84 +9,27 @@ import { Image } from 'astro:assets';
 import TextBlock from '@components/TextBlock.astro';
 ---
 
-<Layout title="Matt Richards - Selected Work - Employee Navigator UX/UI Design">
+<PortfolioItem title="Matt Richards - Selected Work - Employee Navigator UX/UI Design">
 	<main>
 
 		<a href="/" class="logomark" title="Return to homepage">
 			<Image src={Logomark} alt="M Logomark, shorthand for Matt Richards" style="object-fit: cover; height: 56px; width: 56px" />
 		</a>
 
-		<div class="breadcrumbs">
-			<a href="/work/">Portfolio</a> <span class="divider"></span> <a href="/work/employee-navigator/">Employee Navigator</a>
-		</div>
-		
-		<h1>Employee Navigator</h1>
+		<div class="spacer-default"></div>
 
-		<p class="intro">I redesigned two products, built a design system, maintained the brand, and lead the design team at Employee Navigator.</p>
+		<Breadcrumb>
+			<a href="/work/">Portfolio</a> <span class="divider">⌃</span> <div class="selected">Employee Navigator</div>
+		</Breadcrumb>
 
-		<p>Our products deliver benefits to over 13,000,000 employees working at 150,000 businesses across the United States. With a 97% customer satisfaction rating, our customers are highly engaged in shaping the best-in-class user experience for benefits administration.</p>
+		<h2>I redesigned two products, built a design system, maintained the brand, and lead the design team at Employee Navigator.</h2>
+
+		<h3>Our products deliver benefits to over 13,000,000 employees working at 150,000 businesses across the United States. With a 97% customer satisfaction rating, our customers are highly engaged in shaping the best-in-class user experience for benefits administration.</h3>
 
 		<TextBlock>
 			The design work from Employee Navigator is only a small preview. For more detailed UX & UI breakdowns, please view my work for Brivo, Elo, or Shadow.
 		</TextBlock>
 		
-
 		</section>
 	</main>
 </Layout>
-
-<style lang="scss">
-$text-color-primary: #333131;
-$text-color-muted: #6B6766;
-$secondary-color-accent: #716FD3;
-
-	.logomark { 
-		display: block;
-		width: 56px;
-		height: 56px;
-		background-image: url('{Logomark}');
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
-	}
-
-	main {
-		margin: 140px auto;
-		padding: 1.5rem;
-		max-width: 540px;
-	}
-	h1, h2 {
-		font-style: normal;
-		font-weight: 600;
-		font-size: 24px;
-		line-height: 28px;
-		margin: 0;
-	}
-	ul { margin: 0; padding: 0; }
-	p.intro { 
-		color: $text-color-primary;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 32px;
-		/* or 133% */
-		letter-spacing: 0.02em;
-	}
-	p.secondary { color: $text-color-muted; }
-
-	.portfolio { 
-		margin-top: 3rem;
-		a img {
-			display: block;
-			width: 580px;
-			height: 200px;
-			border-radius: 12px;
-			overflow: hidden;
-			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.0);
-			transition: box-shadow 0.2s ease-in-out;
-		}
-		a:hover img {
-			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.1);
-		}
-	}
-</style>
