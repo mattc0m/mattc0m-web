@@ -6,10 +6,7 @@ import BlogListItem from '@components/BlogListItem.astro';
 import ImageContainer from '@components/ImageContainer.astro';
 import ImageContainerDark from '@components/ImageContainerDark.astro';
 import { Image } from 'astro:assets';
-import PortfolioEN from '@assets/images/PortfolioCover/Employee Navigator@2x.png'
-import PortfolioBrivo from '@assets/images/PortfolioCover/Brivo@2x.png'
-import PortfolioElo from '@assets/images/PortfolioCover/Elo@2x.png'
-import PortfolioShadow from '@assets/images/PortfolioCover/Shadow@2x.png'
+import TextBlock from '@components/TextBlock.astro';
 ---
 
 <Layout title="Matt Richards - Selected Work - Employee Navigator UX/UI Design">
@@ -20,57 +17,19 @@ import PortfolioShadow from '@assets/images/PortfolioCover/Shadow@2x.png'
 		</a>
 
 		<div class="breadcrumbs">
-			<a href="/">Home</a> <span class="divider"></span> <a href="/work/">Selected Work</a> <span class="divider"></span> <a href="/work/employee-navigator/">Employee Navigator</a>
+			<a href="/work/">Portfolio</a> <span class="divider"></span> <a href="/work/employee-navigator/">Employee Navigator</a>
 		</div>
 		
 		<h1>Employee Navigator</h1>
 
-		<p class="intro">I'm a designer who likes coding HTML & CSS, taking <strike>cat</strike> photos, filming videos, sharing Figma tips, and talking about product design.</p>
+		<p class="intro">I redesigned two products, built a design system, maintained the brand, and lead the design team at Employee Navigator.</p>
 
-		<p class="intro">Building websites is my happy place.</p>
+		<p>Our products deliver benefits to over 13,000,000 employees working at 150,000 businesses across the United States. With a 97% customer satisfaction rating, our customers are highly engaged in shaping the best-in-class user experience for benefits administration.</p>
 
-		<p class="secondary">Website under construction</p>
-		<p class="secondary">Currently making this project way too complicated.</p>
-			
-		<ul role="list" class="blog-list">
-			<BlogListItem
-				href="https://www.figma.com/proto/n644wvluQVK1le8o5qpbJQ/Matt-Richards-Portfolio-(Public)?page-id=0%3A1&node-id=330-900&viewport=1214%2C905%2C0.12&scaling=min-zoom&starting-point-node-id=330%3A900"
-				title="View Portfolio Prototype"
-				date="Interactive Figma Prototype"
-			/>
-		</ul>
-
-		<section class="portfolio">
-			<h2>Portfolio is coming soon</h2>
-
-			<ImageContainer
-				href="/work/employee-navigator/"
-				title="Employee Navigator"
-				body="2022 - Current">
-				<Image src={PortfolioEN} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"/>
-			</ImageContainer>
-
-			<ImageContainerDark
-				href="/work/brivo/"
-				title="Brivo"
-				body="2020 - 2022"
-				>
-				<Image src={PortfolioBrivo} alt="Thumbnail of UI Mockups from Brivo" style="object-fit: cover; height: 100%; width: 100%;"  />
-			</ImageContainerDark>
-			
-			<ImageContainerDark
-				href="/work/elo/"
-				title="Elo"
-				body="2019 - 2020">
-				<Image src={PortfolioElo} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
-			</ImageContainerDark>
-			
-			<ImageContainerDark
-				href="/work/shadow/"
-				title="Shadow"
-				body="2016 - 2019">
-				<Image src={PortfolioShadow} alt="Thumbnail of UI Mockups from Shadow" style="object-fit: cover; height: 100%; width: 100%;"  />
-			</ImageContainerDark>
+		<TextBlock>
+			The design work from Employee Navigator is only a small preview. For more detailed UX & UI breakdowns, please view my work for Brivo, Elo, or Shadow.
+		</TextBlock>
+		
 
 		</section>
 	</main>
