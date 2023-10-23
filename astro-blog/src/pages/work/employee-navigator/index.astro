@@ -6,6 +6,7 @@ import BlogListItem from '@components/BlogListItem.astro';
 import PortfolioBlock from '@components/PortfolioBlock.astro';
 import { Image } from 'astro:assets';
 import TextBlock from '@components/TextBlock.astro';
+import { Icon } from 'astro-icon'
 ---
 
 <PortfolioLayout title="Matt Richards - Selected Work - Employee Navigator UX/UI Design">
@@ -18,7 +19,7 @@ import TextBlock from '@components/TextBlock.astro';
 		<div class="spacer-default"></div>
 
 		<Breadcrumb>
-			<a href="/work/">Portfolio</a> <span class="divider">⌃</span> <div class="selected">Employee Navigator</div>
+			<a href="/work/">Portfolio</a> <div class="icon divider"><Icon name="carbon:chevron-right" /></div> <div class="selected">Employee Navigator</div>
 		</Breadcrumb>
 
 		<h2>I redesigned two products, built a design system, maintained the brand, and lead the design team at Employee Navigator.</h2>
@@ -38,4 +39,10 @@ import TextBlock from '@components/TextBlock.astro';
 </PortfolioLayout>
 
 <style>
+
+	.icon.divider {
+	  width: 24px;
+	  height: 24px;
+	  line-height: 24px;
+	}
 </style>
