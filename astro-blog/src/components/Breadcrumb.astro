@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon'
 export interface Props {
-	firstTitle: string;
-  firstLink: string;
-  pageTitle: string;
+	firstTitle?: string;
+  firstLink?: string;
+  pageTitle?: string;
 }
 
 const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Navigator" } = Astro.props;

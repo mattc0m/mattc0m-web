@@ -9,9 +9,12 @@ import { Image } from 'astro:assets';
 import TextBlock from '@components/TextBlock.astro';
 import { Icon } from 'astro-icon'
 import ImageContainer from '@components/ImageContainer.astro';
+
+const { pageTitle = "Employee Navigator" } = Astro.props;
+
 ---
 
-<PortfolioLayout title="Matt Richards - Selected Work - Employee Navigator UX/UI Design">
+<PortfolioLayout title={pageTitle}>
 	<main class="portfolio-container employeenav">
 		<section class="portfolio-intro">
 			<a href="/" class="logomark" title="Return to homepage">
@@ -20,7 +23,7 @@ import ImageContainer from '@components/ImageContainer.astro';
 
 			<div class="spacer-default"></div>
 
-			<Breadcrumb></Breadcrumb>
+			<Breadcrumb firstTitle="Portfolio" firstLink="/work/" pageTitle={pageTitle}></Breadcrumb>
 			
 			<h2>I redesigned two products, built a design system, maintained the brand, and lead the design team at Employee Navigator.</h2>
 
