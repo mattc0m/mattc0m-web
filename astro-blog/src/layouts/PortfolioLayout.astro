@@ -7,6 +7,9 @@ const { title } = Astro.props;
 
 import "@fontsource/inter/variable-full.css";
 import "@fontsource/dm-mono";
+
+import "@styles/mattc0m-tokens.css";
+
 ---
 
 <!DOCTYPE html>
@@ -77,5 +80,40 @@ import "@fontsource/dm-mono";
 		line-height: 22px; /* 137.5% */
 	}
 
+	.portfolio-container { 
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-layout-default, 32px);
+	}
+	.portfolio-intro { max-width: var(--site-width, 800px); margin: 0 auto; }
+
+	.portfolio-divider {
+		position: relative;
+		height: 48px;
+		width: 864px;
+		margin-left: -32px;
+		border-left: 1px solid var(--grey-200);
+		border-right: 1px solid var(--grey-200);
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			display: block;
+			width: 48px;
+			height: 1px;
+			border-bottom: 1px solid var(--grey-200);
+		}
+		&:after { right: 0; }
+	}
+
 	.spacer-default { height: 64px; }
+
+
+	.icon.divider {
+	  width: 24px;
+	  height: 24px;
+	  line-height: 24px;
+	}
+
 </style>

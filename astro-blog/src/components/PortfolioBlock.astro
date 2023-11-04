@@ -1,12 +1,13 @@
 ---
 export interface Props {
 	title: string;
+    slug: string;
 }
 
-const { title } = Astro.props;
+const { title, slug } = Astro.props;
 ---
 
-<div class="PortfolioBlock">
+<div class="PortfolioBlock" id={slug}>
     <div class="title">{title}</div>
     <div class="body">
         <slot />

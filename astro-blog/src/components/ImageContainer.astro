@@ -3,9 +3,11 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+    height: string;
+    width: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, height = "580px", width = "200px" } = Astro.props;
 ---
 
 <!-- <a href={href} class="ImageContainer"> -->
@@ -25,11 +27,11 @@ const { href, title, body } = Astro.props;
         </div>
     </div>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ height, width }}>
     // Codepen: https://codepen.io/mattc0m/pen/dyQByRE
     // Design Tokens (Variables)
-    $ImageContainer-Width: 580px;
-    $ImageContainer-Height: 200px;
+    $ImageContainer-Width: var(--height);
+    $ImageContainer-Height: var(--width);
     $ImageContainer-VerticalPadding: 32px;
     $ImageContainer-HorizontalPadding: 32px;
     $ImageContainer-BorderColor: #000;

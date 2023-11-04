@@ -1,12 +1,18 @@
 ---
 import { Icon } from 'astro-icon'
+export interface Props {
+	firstTitle: string;
+  firstLink: string;
+  pageTitle: string;
+}
+
+const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Navigator" } = Astro.props;
 ---
 
-
 <div class="breadcrumb large">
-  <a class="text" href="/work/">Portfolio</a> 
+  <a class="text" href={firstLink}>{firstTitle}</a> 
   <div class="icon divider"><Icon name="carbon:chevron-right" /></div> 
-  <div class="text selected">Employee Navigator</div>
+  <div class="text selected">{pageTitle}</div>
 </div>
 
 <style lang="scss">
