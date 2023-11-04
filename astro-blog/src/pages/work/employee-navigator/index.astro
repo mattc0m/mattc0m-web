@@ -9,6 +9,7 @@ import { Image } from 'astro:assets';
 import TextBlock from '@components/TextBlock.astro';
 import { Icon } from 'astro-icon'
 import ImageContainer from '@components/ImageContainer.astro';
+import InnerText from '@components/PortfolioInnerText.astro';
 
 const { pageTitle = "Employee Navigator" } = Astro.props;
 
@@ -39,6 +40,10 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 		</TextBlock>
 
 		<PortfolioBlock title="Benefit Administration Cloud Software" slug="benefits-management">
+			<InnerText>
+				<h2>Benefits Management</h2>
+				<p>Employee Navigator's core product allows benefits administrators to manage their brokerage and HR teams to manage employees and their benefits in a <span class="tooltip">cloud-based SaaS B2B platform</span>.</p>
+			</InnerText>
 			The design work from Employee Navigator is only a small preview. For more detailed UX & UI breakdowns, please view my work for Brivo, Elo, or Shadow.
 		</PortfolioBlock>
 		
