@@ -9,11 +9,5 @@ const { title, slug } = Astro.props;
 ---
 
 <div class="PortfolioBlock" id={slug}>
-    <div class="title">{title}</div>
-    <div class="body">
-        <slot />
-    </div>
-    <div class="image">
-        <slot name="image" />
-    </div>
+    <slot />
 </div>

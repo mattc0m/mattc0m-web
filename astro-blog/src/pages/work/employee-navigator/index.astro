@@ -1,7 +1,7 @@
 ---
-import Logomark from '@assets/images/M-Logomark@2x.png';
 import PortfolioLayout from '@layouts/PortfolioLayout.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
+import Header from '@components/Header.astro';
 import BlogListItem from '@components/BlogListItem.astro';
 import PortfolioBlock from '@components/PortfolioBlock.astro';
 import ScrollspyNavbar from '@components/ScrollspyNavbar.astro';
@@ -10,6 +10,7 @@ import TextBlock from '@components/TextBlock.astro';
 import { Icon } from 'astro-icon'
 import ImageContainer from '@components/ImageContainer.astro';
 import InnerText from '@components/PortfolioInnerText.astro';
+import PortfolioElo from '@assets/images/PortfolioCover/Elo@2x.png'
 
 const { pageTitle = "Employee Navigator" } = Astro.props;
 
@@ -18,9 +19,8 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 <PortfolioLayout title={pageTitle}>
 	<main class="portfolio-container employeenav">
 		<section class="portfolio-intro">
-			<a href="/" class="logomark" title="Return to homepage">
-				<Image src={Logomark} alt="M Logomark, shorthand for Matt Richards" style="object-fit: cover; height: 56px; width: 56px" />
-			</a>
+			<Header>
+			</Header>
 
 			<div class="spacer-default"></div>
 
@@ -44,7 +44,13 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 				<h2>Benefits Management</h2>
 				<p>Employee Navigator's core product allows benefits administrators to manage their brokerage and HR teams to manage employees and their benefits in a <span class="tooltip">cloud-based SaaS B2B platform</span>.</p>
 			</InnerText>
-			The design work from Employee Navigator is only a small preview. For more detailed UX & UI breakdowns, please view my work for Brivo, Elo, or Shadow.
+			<ImageContainer
+				width="496px" 
+				height="383px"
+				title="Product Redesign"
+				body="2023 - Identified 100+ UI/UX issues to resolve in UI refactor">
+				<Image src={PortfolioElo} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
+			</ImageContainer>
 		</PortfolioBlock>
 		
 		</section>

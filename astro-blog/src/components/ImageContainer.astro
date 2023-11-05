@@ -1,18 +1,20 @@
 ---
 export interface Props {
-	title: string;
-	body: string;
-	href: string;
-    height: string;
-    width: string;
+	title?: string;
+	body?: string;
+    height?: string;
+    width?: string;
+    href?: string;
+    cssClass?: string;
+    textClass?: string;
 }
 
-const { href, title, body, height = "580px", width = "200px" } = Astro.props;
+const { title, body, href, cssClass, textClass, height = "200px", width = "580px" } = Astro.props;
 ---
 
 <!-- <a href={href} class="ImageContainer"> -->
-    <div class="ImageContainer">
-        <div class="TextBlock hasByline">
+    <a class:list={[ 'ImageContainer', cssClass ]} href={href}>
+        <div class:list={[ 'TextBlock hasByline', textClass ]}>
             <span class="title">{title}</span>  
             <span class="byline">{body}</span>
         </div>
@@ -25,13 +27,13 @@ const { href, title, body, height = "580px", width = "200px" } = Astro.props;
                 <slot />
             </div>
         </div>
-    </div>
+    </a>
 
 <style lang="scss" define:vars={{ height, width }}>
     // Codepen: https://codepen.io/mattc0m/pen/dyQByRE
     // Design Tokens (Variables)
-    $ImageContainer-Width: var(--height);
-    $ImageContainer-Height: var(--width);
+    $ImageContainer-Width: var(--width);
+    $ImageContainer-Height: var(--height);
     $ImageContainer-VerticalPadding: 32px;
     $ImageContainer-HorizontalPadding: 32px;
     $ImageContainer-BorderColor: #000;
@@ -104,9 +106,9 @@ const { href, title, body, height = "580px", width = "200px" } = Astro.props;
         }
         .BackgroundContainer { 
             border-radius: $ImageContainer-BorderRadius - $ImageContainer-BorderWidth; // uses quick maths to solve pixel bleed issue
-        } 
+        }
+
         // Variant: Large (Size)
-        
         &.sizeLarge {
         width: $ImageContainer-Large-Width;
         height: $ImageContainer-Large-Height;
@@ -116,6 +118,21 @@ const { href, title, body, height = "580px", width = "200px" } = Astro.props;
         background: $ImageContainer-Large-Background;
         border: $ImageContainer-Large-BorderWidth $ImageContainer-Large-BorderStyle $ImageContainer-Large-BorderColor;
         margin-bottom: $UI-Gap-Small * 2;    
+        }
+
+        // Variant: onDark (Theme)
+        &.themeDark {
+            background: none;
+        }
+
+        // Variant: isComingSoon
+        &.isComingSoon { 
+            .comingSoon { display: flex; }
+            .ImageContainer:hover {
+                .comingSoon {
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -200,16 +217,10 @@ const { href, title, body, height = "580px", width = "200px" } = Astro.props;
         z-index: 5;
         background: rgba(0,0,0,0.75);
         top: 0; left: 0;
-        display: flex;
         color: $basicDark-TextBlock-Title-Color;
         justify-content: center;
         align-items: center;
         transition: background ease-in-out 0.3s, opacity ease-in-out 0.3s;
-    }
-
-    .ImageContainer:hover {
-        .comingSoon {
-            opacity: 1;
-        }
+        display: none; 
     }
 </style>
