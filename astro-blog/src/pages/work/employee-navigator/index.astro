@@ -11,7 +11,8 @@ import { Icon } from 'astro-icon'
 import ImageContainer from '@components/ImageContainer.astro';
 import InnerText from '@components/PortfolioInnerText.astro';
 import PortfolioElo from '@assets/images/PortfolioCover/Elo@2x.png'
-
+import ScreenshotBenefitsManagaement from '@assets/images/PortfolioItem/PorfolioItem-EN-BenefitsManagementSaaS@2x.png'
+import ScreenshotEmployeeExperience from '@assets/images/PortfolioItem/PorfolioItem-EN-EmployeeExperience@2x.png'
 const { pageTitle = "Employee Navigator" } = Astro.props;
 
 ---
@@ -36,23 +37,49 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 
 		<ScrollspyNavbar></ScrollspyNavbar>
 
+		<PortfolioBlock title="Benefit Administration Cloud Software" slug="benefits-management">
+			<InnerText>
+				<h2>Benefits Management</h2>
+				<p>Employee Navigator's core product allows benefits administrators to manage their brokerage and HR teams to manage employees and their benefits in a <span class="tooltip">cloud-based SaaS B2B platform</span>.</p>
+				<ul>
+					<li>Led UX/UI refactor, where designers & developers identified and fixed 100+ UX/UI issues</li>
+					<li>Shipped dozens of user-tested solutions by collaborating closely with PMs & developers to identify problems, build solutions, and test designs.
+						<ul>
+							<li>Notable features: new user management system (called “Licensee”), paperless authorization, plan import via API, and integration-related dashboards & workflows.</li>
+						</ul>
+					</li>
+						
+						
+				</ul>
+			</InnerText>
+			<ImageContainer
+				width="1024px" 
+				height="300px">
+				<Image src={ScreenshotBenefitsManagaement} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
+			</ImageContainer>
+		</PortfolioBlock>
+
 		<TextBlock>
 			<span>The design work from Employee Navigator is only a small preview. For more detailed UX & UI breakdowns, please view my work for <a href="/work/brivo" class="link-brivo">Brivo</a>, <a href="/work/elo/" class="link-elo">Elo</a>, or <a href="/work/shadow/" class="link-shadow">Shadow</a>.</span>
 		</TextBlock>
 
 		<PortfolioBlock title="Benefit Administration Cloud Software" slug="benefits-management">
 			<InnerText>
-				<h2>Benefits Management</h2>
-				<p>Employee Navigator's core product allows benefits administrators to manage their brokerage and HR teams to manage employees and their benefits in a <span class="tooltip">cloud-based SaaS B2B platform</span>.</p>
+				<h2>Employee Experience</h2>
+				<p>Employee Navigator offers an full employee homepage experience, allowing any employee to login, select and manage benefits, view documents and messages, request or manage PTO, and complete a variety of HR-assigned tasks/</p>
+				<ul>
+					<li>Developed & implemented a new design language with updated colors, iconography, typography, less borders, and more.</li>
+					<li>The goal was to introduce an updated theme that was familiar & comfortable to existing users.</li>
+					<li>We grouped over 120+ UX/UI issues into 11 common themes, and worked alongside a variety of product managers & developers to implement user-facing solutions and fixes.</li>
+				</ul>
 			</InnerText>
 			<ImageContainer
-				width="496px" 
-				height="383px"
-				title="Product Redesign"
-				body="2023 - Identified 100+ UI/UX issues to resolve in UI refactor">
-				<Image src={PortfolioElo} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
+				width="1024px" 
+				height="413px">
+				<Image src={ScreenshotEmployeeExperience} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
 			</ImageContainer>
 		</PortfolioBlock>
+
 		
 		</section>
 	</main>
