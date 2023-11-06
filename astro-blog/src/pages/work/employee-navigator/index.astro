@@ -13,6 +13,8 @@ import InnerText from '@components/PortfolioInnerText.astro';
 import PortfolioElo from '@assets/images/PortfolioCover/Elo@2x.png'
 import ScreenshotBenefitsManagaement from '@assets/images/PortfolioItem/PorfolioItem-EN-BenefitsManagementSaaS@2x.png'
 import ScreenshotEmployeeExperience from '@assets/images/PortfolioItem/PorfolioItem-EN-EmployeeExperience@2x.png'
+import ScreenshotDesignSystem from '@assets/images/PortfolioItem/PorfolioItem-EN-DesignSystem@2x.png'
+import ScreenshotUXResearch from '@assets/images/PortfolioItem/PortfolioItem-EN-UXResearch.png'
 const { pageTitle = "Employee Navigator" } = Astro.props;
 
 ---
@@ -55,7 +57,7 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 			<ImageContainer
 				width="1024px" 
 				height="300px">
-				<Image src={ScreenshotBenefitsManagaement} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
+				<Image src={ScreenshotBenefitsManagaement} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"  />
 			</ImageContainer>
 		</PortfolioBlock>
 
@@ -63,10 +65,10 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 			<span>The design work from Employee Navigator is only a small preview. For more detailed UX & UI breakdowns, please view my work for <a href="/work/brivo" class="link-brivo">Brivo</a>, <a href="/work/elo/" class="link-elo">Elo</a>, or <a href="/work/shadow/" class="link-shadow">Shadow</a>.</span>
 		</TextBlock>
 
-		<PortfolioBlock title="Benefit Administration Cloud Software" slug="benefits-management">
+		<PortfolioBlock title="Employee Experience" slug="employee-experience">
 			<InnerText>
 				<h2>Employee Experience</h2>
-				<p>Employee Navigator offers an full employee homepage experience, allowing any employee to login, select and manage benefits, view documents and messages, request or manage PTO, and complete a variety of HR-assigned tasks/</p>
+				<p>Employee Navigator offers an full employee homepage experience, allowing any employee to login, select and manage benefits, view documents and messages, request or manage PTO, and complete a variety of HR-assigned tasks.</p>
 				<ul>
 					<li>Developed & implemented a new design language with updated colors, iconography, typography, less borders, and more.</li>
 					<li>The goal was to introduce an updated theme that was familiar & comfortable to existing users.</li>
@@ -76,10 +78,48 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 			<ImageContainer
 				width="1024px" 
 				height="413px">
-				<Image src={ScreenshotEmployeeExperience} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
+				<Image src={ScreenshotEmployeeExperience} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"  />
 			</ImageContainer>
 		</PortfolioBlock>
 
+		<PortfolioBlock title="Design System" slug="design-system">
+			<InnerText>
+				<h2>Design System</h2>
+				<p>Developed a series of patterns and components that could be used by designers or developers. Created and maintained 30+ synced Figma & Vue-based Storybook components by collaborating with frontend engineers.</p>
+				<ul>
+					<li>We maintained foundational systems (color, icons, typography, etc.), implemented design tokens, and developed a series of reusable patterns (for tables, forms, sidebars, etc.)</li>
+					<li>Created linked Figma libraries for all marketing and product design work.</li>
+					<li>The goal was to give a shared language and more collaborative workflows for designers & developers.</li>
+				</ul>
+			</InnerText>
+			<ImageContainer
+				width="1024px" 
+				height="393px">
+				<Image src={ScreenshotDesignSystem} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"  />
+			</ImageContainer>
+		</PortfolioBlock>
+
+		<PortfolioBlock title="Design System" slug="design-system">
+			<InnerText>
+				<h2>UX Research</h2>
+				<p>Shared user research & early product discovery processes with product team, and successfully translated insights into actionable goals to improve the product quality and usability, while staying aligned with business goals.</p>
+				<ul>
+					<li>Created EN First Look, a research program that allowed our users to opt-in for beta tests & UX product research sessions. Our users loved this program and would constantly share their opinions, even unsolicited! Based on Gitlab’s First Look.</li>
+					<li>Regularly conducted & shared user research findings with product team</li>
+					<li>Shared resources, best practices, and templates with product team. Conducted hands-on learning sessions and continually advocated for informing design decisions with user research.</li>
+				</ul>
+			</InnerText>
+			<ImageContainer
+				width="1024px" 
+				height="467px">
+				<Image src={ScreenshotUXResearch} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"  />
+			</ImageContainer>
+		</PortfolioBlock>
+
+		<CodeSnippetGroup>
+			<h2>Code Snippets</h2>
+			<p>Here's some sample UI code snippets I wrote from 2022-2023. Not all related to my work at Employee Navigator.</p>
+		</CodeSnippetGroup>
 		
 		</section>
 	</main>
