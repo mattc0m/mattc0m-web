@@ -1,20 +1,30 @@
 ---
+// Global
 import PortfolioLayout from '@layouts/PortfolioLayout.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
-import Header from '@components/Header.astro';
-import BlogListItem from '@components/BlogListItem.astro';
-import PortfolioBlock from '@components/PortfolioBlock.astro';
-import ScrollspyNavbar from '@components/ScrollspyNavbar.astro';
 import { Image } from 'astro:assets';
-import TextBlock from '@components/TextBlock.astro';
 import { Icon } from 'astro-icon'
+
+// Components
+import Header from '@components/Header.astro';
+import ScrollspyNavbar from '@components/ScrollspyNavbar.astro';
+import PortfolioBlock from '@components/PortfolioBlock.astro';
+import TextBlock from '@components/TextBlock.astro';
 import ImageContainer from '@components/ImageContainer.astro';
 import InnerText from '@components/PortfolioInnerText.astro';
-import PortfolioElo from '@assets/images/PortfolioCover/Elo@2x.png'
+import CodeSnippetGroup from '@components/CodeSnippetGroup.astro';
+import CodeSnippet from '@components/CodeSnippet.astro';
+import LinkEffectGlitch from '@components/LinkEffectGlitch.astro';
+
+
+// Images
 import ScreenshotBenefitsManagaement from '@assets/images/PortfolioItem/PorfolioItem-EN-BenefitsManagementSaaS@2x.png'
 import ScreenshotEmployeeExperience from '@assets/images/PortfolioItem/PorfolioItem-EN-EmployeeExperience@2x.png'
 import ScreenshotDesignSystem from '@assets/images/PortfolioItem/PorfolioItem-EN-DesignSystem@2x.png'
-import ScreenshotUXResearch from '@assets/images/PortfolioItem/PortfolioItem-EN-UXResearch.png'
+import ScreenshotUXResearch from '@assets/images/PortfolioItem/PortfolioItem-EN-UXResearch@2x.png'
+import CodeSnippetButtons from '@assets/images/CodeSnippet/EN23Buttons@2x.png'
+
+// Variables & Fun Stuff
 const { pageTitle = "Employee Navigator" } = Astro.props;
 
 ---
@@ -82,7 +92,7 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 			</ImageContainer>
 		</PortfolioBlock>
 
-		<PortfolioBlock title="Design System" slug="design-system">
+		<PortfolioBlock title="Design System" slug="ux-research">
 			<InnerText>
 				<h2>Design System</h2>
 				<p>Developed a series of patterns and components that could be used by designers or developers. Created and maintained 30+ synced Figma & Vue-based Storybook components by collaborating with frontend engineers.</p>
@@ -102,11 +112,11 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 		<PortfolioBlock title="Design System" slug="design-system">
 			<InnerText>
 				<h2>UX Research</h2>
-				<p>Shared user research & early product discovery processes with product team, and successfully translated insights into actionable goals to improve the product quality and usability, while staying aligned with business goals.</p>
+				<p>Building a successful digital product requires you continually learn from your users. By utilizing UX research, we’re able to identify the root cause and build workflows, interactions, and experiences that our customers love, all before writing a single line of code.</p>
 				<ul>
 					<li>Created EN First Look, a research program that allowed our users to opt-in for beta tests & UX product research sessions. Our users loved this program and would constantly share their opinions, even unsolicited! Based on Gitlab’s First Look.</li>
-					<li>Regularly conducted & shared user research findings with product team</li>
 					<li>Shared resources, best practices, and templates with product team. Conducted hands-on learning sessions and continually advocated for informing design decisions with user research.</li>
+					<li>Regularly conducted & shared user research findings with product team</li>
 				</ul>
 			</InnerText>
 			<ImageContainer
@@ -118,8 +128,15 @@ const { pageTitle = "Employee Navigator" } = Astro.props;
 
 		<CodeSnippetGroup>
 			<h2>Code Snippets</h2>
-			<p>Here's some sample UI code snippets I wrote from 2022-2023. Not all related to my work at Employee Navigator.</p>
+			<p>Design is cool, but so is code! Here are a few HTML/CSS snippets I wrote and shared in 2022-2023.</p> 
+			<CodeSnippet title="Tabs, Buttons & Input (UI Test)" href="https://codepen.io/mattc0m/pen/ExOpaPB">
+				<Image slot="image" src={CodeSnippetButtons} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;"  />	
+			</CodeSnippet>
 		</CodeSnippetGroup>
+		<p><LinkEffectGlitch title="test" /></p>
+
+		
+
 		
 		</section>
 	</main>

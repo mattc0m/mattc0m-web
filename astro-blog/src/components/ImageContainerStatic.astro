@@ -1,42 +1,44 @@
 ---
 export interface Props {
-	title: string;
-	body: string;
-	href: string;
+	title?: string;
+	body?: string;
+    height?: string;
+    width?: string;
+    cssClass?: string;
+    textClass?: string;
 }
 
-const { href, title, body } = Astro.props;
+const { title, body, href, cssClass, textClass, height = "200px", width = "580px" } = Astro.props;
 ---
 
-<!-- <a href={href} class="ImageContainer"> -->
-<div class="ImageContainer">
-    <div class="TextBlock hasByline onDark">
-        <span class="title">{title}</span>  
-        <span class="byline">{body}</span>
-    </div>
-    
-    <div class="BackgroundContainer isClipped comingSoon">
-        <span>Coming Soon</span>
-    </div>
-    <div class="BackgroundContainer isClipped">
-        <div class="SubImage" id="EN-Thumbnail">
-            <slot />
+    <div class:list={[ 'ImageContainer', cssClass ]}>
+        <div class:list={[ 'TextBlock hasByline', textClass ]}>
+            <span class="title">{title}</span>  
+            <span class="byline">{body}</span>
+        </div>
+        
+        <div class="BackgroundContainer isClipped comingSoon">
+            <span>Coming Soon</span>
+        </div>
+        <div class="BackgroundContainer isClipped">
+            <div class="SubImage" id="EN-Thumbnail">
+                <slot />
+            </div>
         </div>
     </div>
-</div>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ height, width }}>
     // Codepen: https://codepen.io/mattc0m/pen/dyQByRE
     // Design Tokens (Variables)
-    $ImageContainer-Width: 580px;
-    $ImageContainer-Height: 200px;
+    $ImageContainer-Width: var(--width);
+    $ImageContainer-Height: var(--height);
     $ImageContainer-VerticalPadding: 32px;
     $ImageContainer-HorizontalPadding: 32px;
     $ImageContainer-BorderColor: #000;
     $ImageContainer-BorderRadius: 12px;
     $ImageContainer-BoxShadow: none;
     $ImageContainer-Background: #fff;
-    $ImageContainer-HasBorder: 0;
+    $ImageContainer-HasBorder: 1;
     $ImageContainer-BorderWidth: $ImageContainer-HasBorder * 2px;
     $ImageContainer-BorderStyle: solid;
     $ImageContainer-Hover-Background: #fff;
@@ -102,9 +104,9 @@ const { href, title, body } = Astro.props;
         }
         .BackgroundContainer { 
             border-radius: $ImageContainer-BorderRadius - $ImageContainer-BorderWidth; // uses quick maths to solve pixel bleed issue
-        } 
+        }
+
         // Variant: Large (Size)
-        
         &.sizeLarge {
         width: $ImageContainer-Large-Width;
         height: $ImageContainer-Large-Height;
@@ -114,6 +116,21 @@ const { href, title, body } = Astro.props;
         background: $ImageContainer-Large-Background;
         border: $ImageContainer-Large-BorderWidth $ImageContainer-Large-BorderStyle $ImageContainer-Large-BorderColor;
         margin-bottom: $UI-Gap-Small * 2;    
+        }
+
+        // Variant: onDark (Theme)
+        &.themeDark {
+            background: none;
+        }
+
+        // Variant: isComingSoon
+        &.isComingSoon { 
+            > .comingSoon { display: flex; }
+            &:hover {
+                .comingSoon {
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -135,13 +152,9 @@ const { href, title, body } = Astro.props;
         .SubImage {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            height: 100%; 
-            width: 100%;
-
+            height: 100%; width: 100%;
             img { 
-                object-fit: cover;
-                height: 100%; 
-                width: 100%;
+                position: absolute; 
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 user-select: none;
@@ -192,7 +205,6 @@ const { href, title, body } = Astro.props;
             .byline { color: $basicDark-TextBlock-Byline-Color; }
         }
     }
-
     .comingSoon {
         position: absolute;
         width: 100%;
@@ -203,16 +215,10 @@ const { href, title, body } = Astro.props;
         z-index: 5;
         background: rgba(0,0,0,0.75);
         top: 0; left: 0;
-        display: flex;
         color: $basicDark-TextBlock-Title-Color;
         justify-content: center;
         align-items: center;
         transition: background ease-in-out 0.3s, opacity ease-in-out 0.3s;
-    }
-
-    .ImageContainer:hover {
-        .comingSoon {
-            opacity: 1;
-        }
+        display: none; 
     }
 </style>

@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import BlogListItem from '../components/BlogListItem.astro';
 import ImageContainer from '../components/ImageContainer.astro';
-import ImageContainerDark from '../components/ImageContainerDark.astro';
 import { Image } from 'astro:assets';
 import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator@2x.png'
 import PortfolioBrivo from '../assets/images/PortfolioCover/Brivo@2x.png'
@@ -49,17 +48,19 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 				<Image src={PortfolioBrivo} alt="Thumbnail of UI Mockups from Brivo" style="object-fit: cover; height: 100%; width: 100%;" />
 			</ImageContainerDark>
 			
-			<ImageContainerDark
-				href="/work/elo/"
+			<ImageContainer
 				title="Elo"
-				body="2019 - 2020">
+				body="2019 - 2020"
+				textClass="onDark"
+				cssClass="isComingSoon">
 				<Image src={PortfolioElo} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
 			</ImageContainerDark>
 			
-			<ImageContainerDark
-				href="/work/shadow/"
+			<ImageContainer
 				title="Shadow"
-				body="2016 - 2019">
+				body="2016 - 2019"
+				textClass="onDark"
+				cssClass="isComingSoon">
 				<Image src={PortfolioShadow} alt="Thumbnail of UI Mockups from Shadow" style="object-fit: cover; height: 100%; width: 100%;"  />
 			</ImageContainerDark>
 
