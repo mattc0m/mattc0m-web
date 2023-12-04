@@ -1,14 +1,16 @@
 ---
 export interface Props {
 	title: string;
+	size?: string;
 }
 
-const { title } = Astro.props;
+const { title, size = "base" } = Astro.props;
 
 import "@fontsource/inter/variable-full.css";
 import "@fontsource/dm-mono";
-
 import "@styles/mattc0m-tokens.css";
+
+import Footer from "@components/Footer.astro";
 
 ---
 
@@ -22,7 +24,9 @@ import "@styles/mattc0m-tokens.css";
 		<title>Matt Richards - {title} - Selected UX/UI Work</title>
 	</head>
 	<body>
+		<main class:list={[ `size-${size}`, 'portfolio-container' ]} >
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -30,6 +34,7 @@ import "@styles/mattc0m-tokens.css";
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--page-max-width: 1024px;
 	}
 	html {
 		font-family: InterVariable, Inter, Arial, system-ui, sans-serif;
@@ -43,16 +48,9 @@ import "@styles/mattc0m-tokens.css";
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 
-	main {
-		margin: 140px auto;
-		padding: 1.5rem;
-		max-width: 1024px;
-	}
-
 	h2 {
 		margin: 64px 0 32px 0;
 		color: var(--text-primary, #171717);
-		font-variant-numeric: lining-nums tabular-nums slashed-zero;
 		font-family: Inter;
 		font-size: 32px;
 		font-style: normal;
@@ -60,9 +58,8 @@ import "@styles/mattc0m-tokens.css";
 		line-height: 42px; /* 131.25% */
 	}
 
-	h3 { 
+	h3 {
 		color: var(--text-body, #515151);
-		font-variant-numeric: lining-nums tabular-nums;
 		font-family: Inter;
 		font-size: 18px;
 		font-style: normal;
@@ -72,7 +69,6 @@ import "@styles/mattc0m-tokens.css";
 
 	p {
 		color: var(--text-secondary, #5C5C5C);
-		font-variant-numeric: lining-nums tabular-nums slashed-zero;
 		font-family: Inter;
 		font-size: 16px;
 		font-style: normal;
@@ -80,13 +76,17 @@ import "@styles/mattc0m-tokens.css";
 		line-height: 22px; /* 137.5% */
 	}
 
-	.portfolio-container { 
+	.portfolio-container {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacer-layout-xl, 64px);
+		margin: 140px auto;
+		padding: 1.5rem;
+		&.size-base { max-width: var(--page-max-width); }
+		&.size-flex { max-width: auto; }
 	}
 	.portfolio-intro { max-width: var(--site-width, 800px); margin: 0 auto; }
-
+d
 	.portfolio-divider {
 		position: relative;
 		height: 48px;

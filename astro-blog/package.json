@@ -14,12 +14,33 @@
     "@fontsource/dm-mono": "^5.0.12",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/overpass-mono": "^4.5.11",
+    "@mantine/carousel": "^7.2.2",
+    "@mantine/code-highlight": "^7.2.2",
+    "@mantine/core": "^7.2.2",
+    "@mantine/dates": "^7.2.2",
+    "@mantine/dropzone": "^7.2.2",
+    "@mantine/form": "^7.2.2",
+    "@mantine/hooks": "^7.2.2",
+    "@mantine/modals": "^7.2.2",
+    "@mantine/notifications": "^7.2.2",
+    "@mantine/nprogress": "^7.2.2",
+    "@mantine/spotlight": "^7.2.2",
+    "@mantine/tiptap": "^7.2.2",
+    "@tabler/icons-react": "^2.42.0",
+    "@tiptap/extension-link": "^2.1.12",
+    "@tiptap/react": "^2.1.12",
+    "@tiptap/starter-kit": "^2.1.12",
     "astro": "^2.1.0",
     "astro-icon": "^0.8.1",
+    "dayjs": "^1.11.10",
+    "embla-carousel-react": "^8.0.0-rc15",
     "lightgallery": "^2.7.2",
     "vue": "^3.2.30"
   },
   "devDependencies": {
+    "postcss": "^8.4.31",
+    "postcss-preset-mantine": "^1.11.0",
+    "postcss-simple-vars": "^7.0.1",
     "sass": "^1.59.2"
   }
 }
