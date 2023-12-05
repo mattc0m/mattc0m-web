@@ -4,6 +4,7 @@ import Logomark from '@assets/images/M-Logomark@2x.png';
 import Grid from '@components/Grid.astro';
 import GridItem from '@components/GridItem.astro';
 import Divider from '@components/Divider.astro';
+import Link from '@components/Link.astro';
 
 ---
 
@@ -11,9 +12,10 @@ import Divider from '@components/Divider.astro';
     <Divider />
     <Grid>
         <GridItem width="32%">
-            <a href="/" class="logomark" title="Return to homepage">
-                <Image src={Logomark} alt="M Logomark" width="112" height="112" />
-            </a>
+            <Link href="/">Home</Link>
+            <Link href="./relative">Relative</Link>
+            <Link href="/absolute">Absolute</Link>
+            <Link href="//example.com/external">External</Link>
         </GridItem>
         <GridItem width="32%">
             <a href="/" class="logomark" title="Return to homepage">
