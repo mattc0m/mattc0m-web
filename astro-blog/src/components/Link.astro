@@ -1,6 +1,5 @@
 ---
 export interface Props {
-  text: string;
   href?: string;
   linkColor?: string;
   linkColorHover?: string;
@@ -8,20 +7,20 @@ export interface Props {
   underlineColorHover?: string;
   cssClass?: string;
 }
-const { text, href, linkColor = "#4C4F51", linkColorHover, underlineColor = "transparent", underlineColorHover = "#108FE3", cssClass } = Astro.props;
+const { href, linkColor = "#4C4F51", linkColorHover, underlineColor = "transparent", underlineColorHover = "#108FE3", cssClass } = Astro.props;
 
 const url = new URL(Astro.props.href, Astro.url)
 const isExternal = url.host !== Astro.url.host
 const isCurrent = url.href === Astro.url.href
 ---
 
-<a
-	aria-current={isCurrent ? 'page' : null}
-	rel={isExternal ? 'noopener' : null}
+  <a
+  aria-current={isCurrent ? 'page' : null}
+  rel={isExternal ? 'noopener' : null}
   target={isExternal ? '_blank' : null}
   class:list={[ cssClass ]}
-	{...Astro.props}
-><slot /></a>
+  {...Astro.props}
+  ><slot /></a>
 
 
 <style define:vars={{ linkColor, linkColorHover, underlineColor, underlineColorHover }}>
