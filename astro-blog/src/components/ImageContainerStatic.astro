@@ -8,15 +8,15 @@ export interface Props {
     textClass?: string;
 }
 
-const { title, body, href, cssClass, textClass, height = "200px", width = "580px" } = Astro.props;
+const { title, body, cssClass, textClass, height = "200px", width = "580px" } = Astro.props;
 ---
 
     <div class:list={[ 'ImageContainer', cssClass ]}>
         <div class:list={[ 'TextBlock hasByline', textClass ]}>
-            <span class="title">{title}</span>  
+            <span class="title">{title}</span>
             <span class="byline">{body}</span>
         </div>
-        
+
         <div class="BackgroundContainer isClipped comingSoon">
             <span>Coming Soon</span>
         </div>
@@ -82,7 +82,7 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
     $ImageContainer-Large-Hover-BorderColor: $ImageContainer-Hover-BorderColor;
     $ImageContainer-Large-Hover-BoxShadow: $ImageContainer-Hover-BoxShadow;
 
-    // Component: ImageContainer 
+    // Component: ImageContainer
     .ImageContainer {
         box-sizing: border-box;
         position: relative;
@@ -96,13 +96,13 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
         border: $ImageContainer-BorderWidth $ImageContainer-BorderStyle $ImageContainer-BorderColor;
         margin-top: 24px;
         text-decoration: none;
-        
+
         &.hover {
             background: $ImageContainer-Hover-Background;
             border-color: $ImageContainer-Hover-BorderColor;
             box-shadow: $ImageContainer-Hover-BoxShadow;
         }
-        .BackgroundContainer { 
+        .BackgroundContainer {
             border-radius: $ImageContainer-BorderRadius - $ImageContainer-BorderWidth; // uses quick maths to solve pixel bleed issue
         }
 
@@ -115,7 +115,7 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
         box-shadow: $ImageContainer-Large-BoxShadow;
         background: $ImageContainer-Large-Background;
         border: $ImageContainer-Large-BorderWidth $ImageContainer-Large-BorderStyle $ImageContainer-Large-BorderColor;
-        margin-bottom: $UI-Gap-Small * 2;    
+        margin-bottom: $UI-Gap-Small * 2;
         }
 
         // Variant: onDark (Theme)
@@ -124,7 +124,7 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
         }
 
         // Variant: isComingSoon
-        &.isComingSoon { 
+        &.isComingSoon {
             > .comingSoon { display: flex; }
             &:hover {
                 .comingSoon {
@@ -134,16 +134,16 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
         }
     }
 
-    // Sub-Component: BackgroundContainer 
+    // Sub-Component: BackgroundContainer
     // This is used to control if the background is clipped or not. These are typically stacked (one container with clipping, one without) on top of eachother, so you can have images that are clipped or overlays.
     // TO DOCUMENT VISUALLY
-    .BackgroundContainer { 
+    .BackgroundContainer {
         position: absolute;
-        top: 0; 
-        left: 0; 
-        right: 0; 
+        top: 0;
+        left: 0;
+        right: 0;
         bottom: 0;
-        height: 100%; 
+        height: 100%;
         width: 100%;
         &.isClipped {
             overflow: hidden;
@@ -153,36 +153,36 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             height: 100%; width: 100%;
-            img { 
-                position: absolute; 
+            img {
+                position: absolute;
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 user-select: none;
                 }
-                
+
             //Position Options
             .FixedTopRight { top: 0; right: 0; }
             .FixedBottomRight { bottom: 0; right: 0; }
             .FixedMidRight { top: 0; bottom: 0; right: 0; }
             .FixedTopLeft { top: 0; left: 0; }
             .FixedBottomLeft { bottom: 0; left: 0; }
-            
+
             .Scale200px { max-width: 200px; }
             .Scale300px { max-width: 300px; }
             .Scale400px { max-width: 400px; }
             .Scale500px { max-width: 500px; }
             .Scale600px { max-width: 600px; }
             .Scale700px { max-width: 700px; }
-        } 
+        }
     }
 
     .TextBlock {
         display: flex;
-        flex-direction: column; 
-        gap: $TextBlock-Gap; 
+        flex-direction: column;
+        gap: $TextBlock-Gap;
         position: relative;
         z-index: 1;
-        
+
         .title {
             font-family: $TextBlock-Title-FontFamily;
             font-size: $TextBlock-Title-FontSize;
@@ -199,7 +199,7 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
             font-style: $TextBlock-Byline-FontStyle;
             color: $TextBlock-Byline-Color;
         }
-        
+
         &.onDark {
             .title { color: $basicDark-TextBlock-Title-Color; }
             .byline { color: $basicDark-TextBlock-Byline-Color; }
@@ -219,6 +219,6 @@ const { title, body, href, cssClass, textClass, height = "200px", width = "580px
         justify-content: center;
         align-items: center;
         transition: background ease-in-out 0.3s, opacity ease-in-out 0.3s;
-        display: none; 
+        display: none;
     }
 </style>
