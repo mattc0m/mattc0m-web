@@ -1,0 +1,49 @@
+---
+import ImageContainerStatic from '@components/ImageContainerStatic.astro';
+export interface Props {
+	title?: string;
+    href?: string;
+    cssClass?: string;
+    thumbnailWidth?: string;
+    thumbnailHeight?: string;
+}
+const { title, href, cssClass, thumbnailWidth = "320px", thumbnailHeight = "170px" } = Astro.props; 
+---
+
+<a class:list={[ 'CodeSnippet', cssClass ]} href={href} target="_blank">
+    <ImageContainerStatic
+        width={thumbnailWidth} 
+        height={thumbnailHeight}>
+        <slot name="image"/>
+    </ImageContainerStatic>
+    <div class="title">
+        {title}
+    </div>
+</a>
+
+<style lang="scss" define:vars={{ thumbnailWidth }}>
+    .CodeSnippet {
+        max-width: var(--thumbnailWidth);
+        text-decoration: none; 
+        display: inline-flex;
+        flex-direction: column;
+        .title { 
+            color: var(--text-secondary); 
+            text-decoration: none; 
+            transition: ease-in 0.25s;
+            padding-top: var(--spacer-ui-x-small);
+            font-size: 14px;
+            text-rendering: optimizeLegibility;
+        }
+        &:hover .title { color: var(--text-primary);  }
+    }
+</style>
+<style is:global>
+    .CodeSnippet .ImageContainer img { 
+        transform: scale(1);
+        transition: ease-in-out 0.35s;
+    }
+    .CodeSnippet:hover .ImageContainer img { 
+        transform: scale(1.1);
+    }
+</style>

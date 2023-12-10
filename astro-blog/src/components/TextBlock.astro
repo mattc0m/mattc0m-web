@@ -1,0 +1,41 @@
+<div class="TextBlock">
+  <slot />
+</div>
+
+<style>
+
+  .TextBlock {
+    box-sizing: border-box;
+    display: flex;
+    padding: 50px 42px;
+    background: var(--dark-primary);
+    border-radius: var(--container-border-radius);
+    color: #F9FAFA;
+    font-size: 16px;
+    line-height: 22px;
+
+    span, p {
+      margin: 0;
+      padding: 0;
+      color: #F9FAFA;
+
+      a {
+        font-weight: 600;
+        color: #F9FAFA;
+        text-decoration: underline;
+        text-decoration-color: #666;
+        transition: text-decoration-color 0.15s ease-in-out;
+
+        &.link-brivo:hover {
+          text-decoration-color: var(--brand-brivo-accent);
+        }
+        &.link-shadow:hover {
+          text-decoration-color: var(--brand-shadow-accent);
+        }
+        &.link-elo:hover {
+          text-decoration-color: var(--brand-elo-accent);
+        }
+      }
+    }
+  }
+
