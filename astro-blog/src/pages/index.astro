@@ -20,7 +20,7 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 
 		<p class="secondary">Website under construction</p>
 		<p class="secondary">Currently making this project way too complicated.</p>
-			
+
 		<ul role="list" class="blog-list">
 			<BlogListItem
 				href="https://www.figma.com/proto/n644wvluQVK1le8o5qpbJQ/Matt-Richards-Portfolio-(Public)?page-id=0%3A1&node-id=330-900&viewport=1214%2C905%2C0.12&scaling=min-zoom&starting-point-node-id=330%3A900"
@@ -34,35 +34,35 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 
 			<ImageContainer
 				title="Employee Navigator"
-				href="/work/employee-navigator"
+				href="/portfolio/employee-navigator"
 				body="2022 - Current">
 				<Image src={PortfolioEN} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;" />
 			</ImageContainer>
 
 			<ImageContainer
 				title="Brivo"
+				href="/portfolio/employee-navigator"
 				body="2020 - 2022"
 				textClass="onDark"
-				cssClass="isComingSoon"
 				>
 				<Image src={PortfolioBrivo} alt="Thumbnail of UI Mockups from Brivo" style="object-fit: cover; height: 100%; width: 100%;" />
-			</ImageContainerDark>
-			
+			</ImageContainer>
+
 			<ImageContainer
 				title="Elo"
 				body="2019 - 2020"
 				textClass="onDark"
 				cssClass="isComingSoon">
 				<Image src={PortfolioElo} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
-			</ImageContainerDark>
-			
+			</ImageContainer>
+
 			<ImageContainer
 				title="Shadow"
 				body="2016 - 2019"
 				textClass="onDark"
 				cssClass="isComingSoon">
 				<Image src={PortfolioShadow} alt="Thumbnail of UI Mockups from Shadow" style="object-fit: cover; height: 100%; width: 100%;"  />
-			</ImageContainerDark>
+			</ImageContainer>
 
 		</section>
 	</main>
@@ -86,7 +86,7 @@ $secondary-color-accent: #716FD3;
 		margin: 0;
 	}
 	ul { margin: 0; padding: 0; }
-	p.intro { 
+	p.intro {
 		color: $text-color-primary;
 		font-style: normal;
 		font-weight: 400;
@@ -97,7 +97,7 @@ $secondary-color-accent: #716FD3;
 	}
 	p.secondary { color: $text-color-muted; }
 
-	.portfolio { 
+	.portfolio {
 		margin-top: 3rem;
 		a img {
 			display: block;

@@ -19,6 +19,7 @@ const portfolio = defineCollection({
 		jobTitle: z.string(),
 		// Transform string to Date object
 		dateRange: z.string(),
+		layoutType: z.string().optional(),
 		logoImage: z.string().optional(),
 	}),
 });

@@ -10,8 +10,8 @@ const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Na
 ---
 
 <div class="breadcrumb large">
-  <a class="text" href={firstLink}>{firstTitle}</a> 
-  <div class="icon divider"><Icon name="carbon:chevron-right" /></div> 
+  <a class="text" href={firstLink}>{firstTitle}</a>
+  <div class="icon divider"><Icon name="carbon:chevron-right" /></div>
   <div class="text selected">{pageTitle}</div>
 </div>
 
@@ -22,7 +22,7 @@ const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Na
   --ui-border-radius-default: 12px;
   --brand-text-primary: #171717;
   --brand-text-tertiary: #9A9A9A;
-  --brand-text-accent: #716FD3;
+  --brand-text-accent: #171717;
 }
 
 .breadcrumb {
@@ -42,7 +42,7 @@ const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Na
     color: var(--brand-text-tertiary);
     text-decoration: none;
     &.selected {
-      cursor: default; 
+      cursor: default;
       color: var(--brand-text-primary);
     }
   }
@@ -56,10 +56,10 @@ const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Na
 }
 
 .icon.divider {
-  padding: 1px 4px 0;
+  padding: 0;
+  margin: 0;
   width: 20px;
-  height: 20px;
-  line-height: 24px;
+  height: auto;
 }
-  
+
 </style>
