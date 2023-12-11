@@ -101,6 +101,7 @@
   --button-border-radius: 6px;
   --accent-color: #716FD3;
   --site-width: 800px;
+  --text-width: 800px;
   --portfolio-width: 1024px;
   --h2-font-size: 30px;
   --h2-letter-spacing: -0.021em;
@@ -111,4 +112,5 @@
   --body-line-height: 23;
   --body-font-size: 16px;
   --body-letter-spacing: -0.011em;
+  --hr-color: #BFC4CA;
 }
