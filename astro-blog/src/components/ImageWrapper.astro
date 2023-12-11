@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+export interface Props {
+  cssClass?: string;
+  textClass?: string;
+}
+
+const { cssClass, textClass } = Astro.props;
+---
+
+<div class:list={[ 'image-container', cssClass ]}>
+  <div class="image"><slot /></div>
+  <div class:list={[ 'caption', textClass ]}><slot name="caption"/></div>
+</div>
+
+
+<style lang="scss">
+  :root {
+    --image-border-radius: var(--container-border-radius);
+  }
+  .image img {
+    display: block;
+    border-radius: var(--image-border-radius);
+    box-shadow: var(--image-box-shadow);
+    transition: .2s ease;
+  }
+  .image-container {
+    .caption { display: none; }
+    &.hasCaption .caption { display: block; }
+    .caption.hasCaption { display: block; }
+  }
+</style>
