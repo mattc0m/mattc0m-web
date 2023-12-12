@@ -4,12 +4,13 @@ export interface Props {
 	firstTitle?: string;
   firstLink?: string;
   pageTitle?: string;
+  cssClass?: string;
 }
 
-const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Navigator" } = Astro.props;
+const { firstTitle = "Portfolio", firstLink, pageTitle = "Employee Navigator", cssClass = "large" } = Astro.props;
 ---
 
-<div class="breadcrumb large">
+<div class:list={[ 'breadcrumb', cssClass ]}>
   <a class="text" href={firstLink}>{firstTitle}</a>
   <div class="icon divider"><Icon name="carbon:chevron-right" /></div>
   <div class="text selected">{pageTitle}</div>
@@ -37,10 +38,16 @@ const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Na
     line-height: 32px;
     letter-spacing: 0.48px;
   }
+  &.small {
+    font-size: 14px;
+    line-height: 18px;
+    .icon.divider { padding: 2px 2px 0 2px; }
+  }
   .text {
     text-rendering: optimizeLegibility;
     color: var(--brand-text-tertiary);
     text-decoration: none;
+
     &.selected {
       cursor: default;
       color: var(--brand-text-primary);
@@ -53,7 +60,19 @@ const { firstTitle = "Portfolio", firstLink = "/work/", pageTitle = "Employee Na
       color: var(--brand-text-accent);
     }
   }
+  &.style-overlay {
+    cursor: default;
+    color: var(--grey-300, #A6ADAF);
+    a, .text, .icon {
+      color: var(--grey-300, #A6ADAF);
+      &:hover { color: var(--grey-300, #A6ADAF); }
+    }
+    .text.selected {
+      color: var(--grey-100);
+    }
+  }
 }
+
 
 .icon.divider {
   padding: 0;

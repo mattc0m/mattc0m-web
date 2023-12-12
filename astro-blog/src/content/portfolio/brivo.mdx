@@ -5,6 +5,10 @@ dateRange: '2020 - 2022'
 layoutType: 'base'
 ---
 import TextBlock from '@components/TextBlock.astro';
+import Grid from '@components/Grid.astro';
+import GridItem from '@components/GridItem.astro';
+import ImageWrapper from '@components/ImageWrapper.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
 
 <div class="portfolio-intro">
 # I designed the product, mobile app, a design system, and lead the design team while at Brivo.
@@ -30,6 +34,68 @@ Brivo Access is a unified platform for access control, user management, live eve
 - Spearheaded the redesign of our flagship product—an integrated suite of access control and monitoring tools catering to business leaders and security teams.
 - Crafted a custom UI with responsive design, incorporating dark/light modes and accessible web components. Rooted in a bespoke design system inspired by Material Design principles.
 - Led the development of a new theme and design system, collaborating seamlessly with the product team. Responsible for delivering wireframes, mockups, prototypes, and conducting UX research to support the monthly release of 2-3 major product features.
+</section>
+
+<section class="portfolio-screens desktop">
+  <Grid gutter="var(--spacer-layout-small)">
+    <GridItem>
+      <ImageWrapper
+        src="/images/PortfolioItem/BrivoAccess-UserManagement.png"
+        href="/images/PortfolioItem/BrivoAccess-UserManagement.png"
+        alt="Thumbnail of Brivo Access Mockup"
+        cssClass="hasCaption clickable">
+          <div slot="caption">
+            <Breadcrumb
+            firstTitle="Brivo Access"
+            pageTitle="User Management"
+            cssClass="small style-overlay"
+            ></Breadcrumb>
+          </div>
+        </ImageWrapper>
+    </GridItem>
+    <GridItem>
+      <ImageWrapper
+        src="/images/PortfolioItem/BrivoAccess-LiveVideoDashboard.png"
+        alt="Thumbnail of Brivo Access Mockup"
+        cssClass="hasCaption clickable">
+          <div slot="caption">
+            <Breadcrumb
+            firstTitle="Brivo Access"
+            pageTitle="Live Video Dashboard"
+            cssClass="small style-overlay"
+            ></Breadcrumb>
+          </div>
+        </ImageWrapper>
+    </GridItem>
+    <GridItem>
+      <ImageWrapper
+        src="/images/PortfolioItem/BrivoAccess-AdminManagement.png"
+        alt="Thumbnail of Brivo Access Mockup"
+        cssClass="hasCaption clickable">
+          <div slot="caption">
+            <Breadcrumb
+            firstTitle="Brivo Access"
+            pageTitle="Admin Management"
+            cssClass="small style-overlay"
+            ></Breadcrumb>
+          </div>
+        </ImageWrapper>
+    </GridItem>
+    <GridItem>
+      <ImageWrapper
+        src="/images/PortfolioItem/VisualIdeation-DeviceStatusCard.png"
+        alt="Thumbnail of Brivo Access Mockup"
+        cssClass="hasCaption clickable">
+          <div slot="caption">
+            <Breadcrumb
+            firstTitle="Visual Ideation"
+            pageTitle="Device Status Card"
+            cssClass="small style-overlay"
+            ></Breadcrumb>
+          </div>
+        </ImageWrapper>
+    </GridItem>
+  </Grid>
 </section>
 
 ---

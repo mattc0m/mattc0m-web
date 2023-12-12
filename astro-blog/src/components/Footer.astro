@@ -9,20 +9,18 @@ import Link from '@components/Link.astro';
 ---
 
 <div class="global-footer">
-    <Divider />
-    <h3>Thanks for visiting</h3>
     <Grid>
         <GridItem width="32%">
+            <a href="/" class="logomark" title="Return to homepage">
+                <Image src={Logomark} alt="M Logomark" width="112" height="112" />
+            </a>
             <div class="list">
                 <Link href="/">Home</Link>
-                <Link href="/work">Portfolio</Link>
+                <Link href="/portfolio/">Portfolio</Link>
             </div>
         </GridItem>
         <GridItem width="32%">
             <div class="list">
-                <a href="/" class="logomark" title="Return to homepage">
-                    <Image src={Logomark} alt="M Logomark" width="112" height="112" />
-                </a>
                 <Link href="https://codepen.io/mattc0m" cssClass="codepen">CodePen</Link>
                 <Link href="https://dribbble.com/mattc0m" cssClass="codepen">Dribbble</Link>
                 <Link href="https://www.linkedin.com/in/mattc0m/" cssClass="codepen">LinkedIn</Link>
@@ -51,5 +49,9 @@ import Link from '@components/Link.astro';
         display: flex;
         flex-direction: column;
         a { margin-bottom: var(--spacer-ui-large); }
+    }
+    .global-footer {
+        padding-top: var(--spacer-layout-xl);
+        border-top: 1px solid var(--hr-color);
     }
 </style>

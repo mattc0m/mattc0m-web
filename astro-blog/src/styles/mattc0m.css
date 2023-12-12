@@ -127,6 +127,14 @@ p, ul, li {
   margin: 0 auto;
   padding: 1.5em;
 }
+.portfolio-header {
+  max-width: var(--site-width, 800px);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-layout-xl);
+}
 
 p img { margin: 0 auto; }
 
