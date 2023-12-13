@@ -38,13 +38,12 @@ const figmatip = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
-		href: z.string(),
 		thumbnailUrl: z.string(),
 		ctaText	: z.string().optional(),
-		logoUrl: z.string().optional(),
 		hrefTarget: z.string().optional(),
 		tags: z.array(z.string()).optional(),
 		videoEmbed: z.string().optional(),
+		gifUrl: z.string().optional(),
 		additionalScreens: z.array(z.string()).optional(),
 		linktoInstagram: z.string().optional(),
 		linktoFacebook: z.string().optional(),
