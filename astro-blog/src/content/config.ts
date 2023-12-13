@@ -37,10 +37,10 @@ const codesnippet = defineCollection({
 const figmatip = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
-		title: z.stringÍ(),
+		title: z.string(),
 		href: z.string(),
 		thumbnailUrl: z.string(),
-		ctaText	: z.string().optional(),Í
+		ctaText	: z.string().optional(),
 		logoUrl: z.string().optional(),
 		hrefTarget: z.string().optional(),
 		tags: z.array(z.string()).optional(),
