@@ -11,27 +11,26 @@ const { firstTitle = "Portfolio", firstLink, pageTitle = "Employee Navigator", c
 ---
 
 <div class:list={[ 'breadcrumb', cssClass ]}>
-  <a class="text" href={firstLink}>{firstTitle}</a>
+  {firstLink ?
+    <a class="text" href={firstLink}>{firstTitle}</a>
+  :
+    <div class="text">{firstTitle}</div>
+  }
+
   <div class="icon divider"><Icon name="carbon:chevron-right" /></div>
   <div class="text selected">{pageTitle}</div>
 </div>
 
-<style lang="scss">
 
-:root {
-  --ui-padding-default: 50px 42px;
-  --ui-border-radius-default: 12px;
-  --brand-text-primary: #171717;
-  --brand-text-tertiary: #9A9A9A;
-  --brand-text-accent: #171717;
-}
+
+<style lang="scss">
 
 .breadcrumb {
   box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--brand-text-tertiary);
+  color: var(--text-primary);
 
   &.large {
     font-size: 24px;
@@ -45,19 +44,19 @@ const { firstTitle = "Portfolio", firstLink, pageTitle = "Employee Navigator", c
   }
   .text {
     text-rendering: optimizeLegibility;
-    color: var(--brand-text-tertiary);
+    color: var(--text-tertiary);
     text-decoration: none;
 
     &.selected {
       cursor: default;
-      color: var(--brand-text-primary);
+      color: var(--text-primary);
     }
   }
   a {
-    color:  var(--brand-text-tertiary);
+    color:  var(--text-tertiary);
     transition: color 0.2s ease-in-out;
     &:hover {
-      color: var(--brand-text-accent);
+      color: var(--text-primary);
     }
   }
   &.style-overlay {

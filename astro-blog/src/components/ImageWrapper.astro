@@ -36,10 +36,8 @@ const { cssClass, textClass, src, alt, href, target = "_blank" } = Astro.props;
     --image-border-radius: var(--container-border-radius);
     --image-box-shadow-hover: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
-  .image-container, a.image-container { position: relative; }
-  .image {
-    max-width: 100%;
-  }
+  .image-container, a.image-container { position: relative; display: inline-block; }
+  .image { max-width: 100%; }
   .image img {
     object-fit: var(--image-object-fit,cover);
     border-radius: var(--image-border-radius);
@@ -49,14 +47,19 @@ const { cssClass, textClass, src, alt, href, target = "_blank" } = Astro.props;
     transition: .2s ease;
   }
   .clickable .image img {
-      cursor: pointer;
-      border: 2px solid var(--dark-primary);
+    cursor: pointer;
     &:hover {
       box-shadow: var(--image-box-shadow-hover);
+    }
+  }
+  .clickable.brivo .image img {
+    border: 2px solid var(--dark-primary);
+    &:hover {
       border: 2px solid var(--brand-brivo-accent);
     }
   }
   .image-container {
+    /* technically more of a text overlay for images, need to re-style as a more basic caption component or make this a variant */
     .caption {
       display: none;
       position: absolute;
@@ -67,6 +70,11 @@ const { cssClass, textClass, src, alt, href, target = "_blank" } = Astro.props;
       width: 100%;
       background: var(--caption-background, linear-gradient(0deg, #131414 23.03%, rgba(19, 20, 20, 0.00) 100%));
       border-radius: 0 0 var(--image-border-radius) var(--image-border-radius);
+      pointer-events: none;
+      p, .text, div {
+        font-size: 14px;
+        color: var(--site-background);
+      }
     }
     &.hasCaption .caption { display: block; }
     .caption.hasCaption { display: block; }

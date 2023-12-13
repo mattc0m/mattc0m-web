@@ -17,11 +17,43 @@ const portfolio = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		jobTitle: z.string(),
-		// Transform string to Date object
 		dateRange: z.string(),
 		layoutType: z.string().optional(),
 		logoImage: z.string().optional(),
 	}),
 });
 
-export const collections = { blog, portfolio };
+const codesnippet = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		href: z.string(),
+		thumbnailUrl: z.string(),
+		logoUrl: z.string().optional(),
+		hrefTarget: z.string().optional(),
+		tags: z.array(z.string()).optional(),
+	}),
+});
+
+const figmatip = defineCollection({
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.stringÍ(),
+		href: z.string(),
+		thumbnailUrl: z.string(),
+		ctaText	: z.string().optional(),Í
+		logoUrl: z.string().optional(),
+		hrefTarget: z.string().optional(),
+		tags: z.array(z.string()).optional(),
+		videoEmbed: z.string().optional(),
+		additionalScreens: z.array(z.string()).optional(),
+		linktoInstagram: z.string().optional(),
+		linktoFacebook: z.string().optional(),
+		linktoLinkedIn: z.string().optional(),
+		linktoTwitter: z.string().optional(),
+		linktoThreads: z.string().optional(),
+		linktoTikTok: z.string().optional(),
+		linktoCodePen: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, portfolio, codesnippet, figmatip };

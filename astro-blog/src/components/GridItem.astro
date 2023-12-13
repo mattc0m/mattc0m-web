@@ -1,12 +1,13 @@
 ---
 export interface Props {
 	width?: string;
+  cssClass?: string;
 }
 
-const { width = "50%" } = Astro.props;
+const { width = "50%", cssClass } = Astro.props;
 ---
 
-<div class="GridItem">
+<div class:list={[ 'GridItem', cssClass ]}>
   <slot />
 </div>
 
@@ -19,5 +20,17 @@ const { width = "50%" } = Astro.props;
   order: var(--item-order);
   width: var(--item-width);
   padding: calc(var(--grid-gutter)/2);
+}
+
+@media (max-width: 767px) {
+  .GridItem {
+    flex-basis: 100%;
+    max-width: 100%;
+
+    &.mobile-half {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
 }
 </style>
