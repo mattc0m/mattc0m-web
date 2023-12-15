@@ -71,11 +71,11 @@ h2 {
 }
 
 h3 {
-  color: var(--text-body, #515151);
+  color: var(--text-title, #171717);
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 28px; /* 155.556% */
 }
 

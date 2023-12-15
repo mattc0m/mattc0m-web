@@ -3,22 +3,20 @@ export interface Props {
 	title: string;
 	date: string;
 	href: string;
+	target?: string;
 }
 
-const { href, title, date } = Astro.props;
+const { href, title, date, target } = Astro.props;
 ---
 
 <li class="blog">
-	<a href={href}>
+	<a href={href} target={target}>
         <span class="blog-title">{title}</span>
         <span class="blog-date">{date}</span>
 	</a>
 </li>
 
 <style lang="scss">
-$text-color-primary: #333131;
-$text-color-muted: #6B6766;
-$secondary-color-accent: #716FD3; 
 
 li.blog {
 	font-size: 16px;
@@ -28,18 +26,37 @@ li.blog {
 	margin: 0;
 	padding: 0 0 16px;
 
-	a { text-decoration: none; }
+	transition: all var(--default-timing) var(--default-bezier);
+	* {transition: all var(--default-timing) var(--default-bezier); }
+
+	a {
+		text-decoration: none;
+		padding: 2px;
+		display: flex;
+		&:hover {
+			padding: 16px;
+			background: var(--accent-color-safe);
+			color: white;
+			border-radius: 4px;
+
+			.blog-title, .blog-date {
+				color: white;
+				transition-delay: 0.05s;
+			}
+			.blog-date { opacity: 0.9; }
+		}
+	}
 	.blog-title {
-		color: $text-color-primary;
+		color: var(--text-primary);
 		font-weight: 500;
 		display: inline-block;
 		text-decoration: underline;
-		text-decoration-color: $secondary-color-accent;
+		text-decoration-color: var(--accent-color-safe);
 		text-decoration-thickness: 2px;
 		text-underline-offset: 0.3em;
 	}
 	.blog-date {
-		color: $text-color-muted;
+		color: var(--text-tertiary);
 		font-weight: normal;
 		margin-left: 1em;
 		font-size: 0.875em;

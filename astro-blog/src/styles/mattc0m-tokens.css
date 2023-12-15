@@ -112,5 +112,10 @@
   --body-line-height: 23;
   --body-font-size: 16px;
   --body-letter-spacing: -0.011em;
+
+  /* custom */
   --hr-color: #BFC4CA;
+  --default-bezier: cubic-bezier(0.65, 0, 0.35, 1);
+  --default-timing: .4s;
+  --accent-color-safe: #6C6BD1;
 }

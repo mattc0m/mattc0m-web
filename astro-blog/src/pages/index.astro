@@ -16,21 +16,20 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 
 		<p class="intro">I'm a designer who likes coding HTML & CSS, taking <strike>cat</strike> photos, filming videos, sharing Figma tips, and talking about product design.</p>
 
-		<p class="intro">Building websites is my happy place.</p>
+		<p class="secondary">I'm current building this website using <a href="https://astro.build/" target="_blank">Astro</a>, learning Javascript and frontend development in the process. Some things will break as this website is being developed! It's a work in progress, but should be complete soon. It still <i>mostly</i> works</p>
 
-		<p class="secondary">Website under construction</p>
-		<p class="secondary">Currently making this project way too complicated.</p>
+		<p class="secondary">Blog, photos, about pages are under way.</p>
 
 		<ul role="list" class="blog-list">
 			<BlogListItem
-				href="https://www.figma.com/proto/n644wvluQVK1le8o5qpbJQ/Matt-Richards-Portfolio-(Public)?page-id=0%3A1&node-id=330-900&viewport=1214%2C905%2C0.12&scaling=min-zoom&starting-point-node-id=330%3A900"
-				title="View Portfolio Prototype"
-				date="Interactive Figma Prototype"
+				href="/Matt Richards Portfolio 2016 - 2023.pdf"
+				title="Download Portfolio PDF"
+				date="All lead design projects from 2016 - 2023"
+				target="_blank"
 			/>
 		</ul>
 
 		<section class="portfolio">
-			<h2>Portfolio is coming soon</h2>
 
 			<ImageContainer
 				title="Employee Navigator"
@@ -47,6 +46,10 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 				>
 				<Image src={PortfolioBrivo} alt="Thumbnail of UI Mockups from Brivo" style="object-fit: cover; height: 100%; width: 100%;" />
 			</ImageContainer>
+
+			<hr>
+
+			<h2>Rest of portfolio is coming soon</h2>
 
 			<ImageContainer
 				title="Elo"
@@ -110,6 +113,11 @@ $secondary-color-accent: #716FD3;
 		}
 		a:hover img {
 			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.1);
+		}
+
+		hr {
+			margin-top: var(--spacer-layout-xl);
+			margin-bottom: var(--spacer-layout-small);
 		}
 	}
 </style>
