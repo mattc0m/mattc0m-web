@@ -8,6 +8,7 @@ import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator@2x.p
 import PortfolioBrivo from '../assets/images/PortfolioCover/Brivo@2x.png'
 import PortfolioElo from '../assets/images/PortfolioCover/Elo@2x.png'
 import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
+import Footer from '@components/Footer.astro';
 ---
 
 <Layout title="Matt Richards, Product Designer">
@@ -15,10 +16,6 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 		<h1>Hi, I'm Matt Richards</h1>
 
 		<p class="intro">I'm a designer who likes coding HTML & CSS, taking <strike>cat</strike> photos, filming videos, sharing Figma tips, and talking about product design.</p>
-
-		<p class="secondary">I'm current building this website using <a href="https://astro.build/" target="_blank">Astro</a>, learning Javascript and frontend development in the process. Some things will break as this website is being developed! It's a work in progress, but should be complete soon. It still <i>mostly</i> works</p>
-
-		<p class="secondary">Blog, photos, about pages are under way.</p>
 
 		<ul role="list" class="blog-list">
 			<BlogListItem
@@ -49,7 +46,7 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 
 			<hr>
 
-			<h2>Rest of portfolio is coming soon</h2>
+			<h3>Rest of portfolio is coming soon</h3>
 
 			<ImageContainer
 				title="Elo"
@@ -67,7 +64,18 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 				<Image src={PortfolioShadow} alt="Thumbnail of UI Mockups from Shadow" style="object-fit: cover; height: 100%; width: 100%;"  />
 			</ImageContainer>
 
+			<hr>
 		</section>
+
+		<section class="more-details">
+
+			<h3>Website is still a work-in-progress</h3>
+			<p class="secondary">I'm developing this website using <a href="https://astro.build/" target="_blank">Astro</a>, which has meant rolling up the sleeves to learn more about Javascript and frontend development.</p>
+
+			<p class="secondary">I'm still working on a few more pages, adding a dark mode, and polishing the experience further. I'll be adding a blog that goes over how I developed this site shortly, it's pretty cool how it all works.</p>
+		</section>
+
+		<Footer />
 	</main>
 </Layout>
 
@@ -114,10 +122,13 @@ $secondary-color-accent: #716FD3;
 		a:hover img {
 			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.1);
 		}
+	}
 
-		hr {
-			margin-top: var(--spacer-layout-xl);
-			margin-bottom: var(--spacer-layout-small);
-		}
+	hr {
+		margin-top: var(--spacer-layout-xl);
+		margin-bottom: var(--spacer-layout-small);
+	}
+	.more-details {
+		padding-bottom: var(--spacer-layout-xl);
 	}
 </style>
