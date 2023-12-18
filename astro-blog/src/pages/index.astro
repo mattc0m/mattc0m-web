@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import BlogListItem from '../components/BlogListItem.astro';
 import ImageContainer from '../components/ImageContainer.astro';
 import { Image } from 'astro:assets';
 import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator@2x.png'
@@ -9,23 +7,26 @@ import PortfolioBrivo from '../assets/images/PortfolioCover/Brivo@2x.png'
 import PortfolioElo from '../assets/images/PortfolioCover/Elo@2x.png'
 import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 import Footer from '@components/Footer.astro';
+import Block from '@components/Block.astro';
+import ButtonFancy from '@components/ButtonFancy.astro';
 ---
 
 <Layout title="Matt Richards, Product Designer">
 	<main>
 		<h1>Hi, I'm Matt Richards</h1>
 
-		<p class="intro">I'm a designer who likes coding HTML & CSS, taking <strike>cat</strike> photos, filming videos, sharing Figma tips, and talking about product design.</p>
+		<p class="intro">A seasoned product designer with 15 years spent crafting and launching innovative websites, products, and businesses.</p>
+		<p class="secondary">Since 2016, I've spearheaded design teams in remote and in-person settings, steering the creation of SaaS products, robust design systems, and building a culture where design is valued and designers can ship their best work.</p>
+		<p class="secondary">I've worked in esports, physical security, and health insurance industries. My approach involves developing user-friendly, visually appealing products guided by a research-first methodology, refining designs based on continuous user feedback.</p>
 
-		<ul role="list" class="blog-list">
-			<BlogListItem
+		<Block>
+			The below link contains the most comprehensive view of my design work from 2016-2023. This work will be on the web shortly.
+			<ButtonFancy
 				href="/Matt Richards Portfolio 2016 - 2023.pdf"
-				title="Download Portfolio PDF"
-				date="All lead design projects from 2016 - 2023"
-				target="_blank"
+				text="Download Matt Richards Portfolio.pdf"
+				linkTarget="_blank"
 			/>
-		</ul>
-
+		</Block>
 		<section class="portfolio">
 
 			<ImageContainer

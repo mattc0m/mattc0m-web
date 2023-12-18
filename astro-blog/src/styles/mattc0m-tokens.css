@@ -118,4 +118,7 @@
   --default-bezier: cubic-bezier(0.65, 0, 0.35, 1);
   --default-timing: .4s;
   --accent-color-safe: #6C6BD1;
+  --block-background-primary: #EDEDEA;
+  --block-background-lightest: #fff;
+  --block-background-darker: #E3E5E6;
 }
