@@ -7,7 +7,7 @@ export interface Props {
   linkTarget?: string;
 }
 
-const { title, body, href, cssClass, text = "Button", textAlt = text, linkTarget} = Astro.props;
+const { href, cssClass, text = "Button", textAlt = text, linkTarget} = Astro.props;
 ---
 
 <a class:list={[ 'button', cssClass ]}role="button" href={href} target={linkTarget}>

@@ -9,18 +9,40 @@ import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
 import Footer from '@components/Footer.astro';
 import Block from '@components/Block.astro';
 import ButtonFancy from '@components/ButtonFancy.astro';
+import Accordion from '@components/Accordion.astro';
+import AccordionItem from '@components/AccordionItem.astro';
+import AlertTop from '@components/AlertTop.astro';
 ---
+
+
+<AlertTop>Website is under construction. More content & pages being added daily.</AlertTop>
 
 <Layout title="Matt Richards, Product Designer">
 	<main>
 		<h1>Hi, I'm Matt Richards</h1>
-
 		<p class="intro">A seasoned product designer with 15 years spent crafting and launching innovative websites, products, and businesses.</p>
-		<p class="secondary">Since 2016, I've spearheaded design teams in remote and in-person settings, steering the creation of SaaS products, robust design systems, and building a culture where design is valued and designers can ship their best work.</p>
+		<div class="intro-text-container">
+			<Accordion>
+				<AccordionItem
+					header="First Item"
+				>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam est tenetur. </p>
+					<a href="#">Tab to me!</a>
+				</AccordionItem>
+				<AccordionItem
+					header="Second Item"
+				>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam est tenetur. </p>
+				</AccordionItem>
+			</Accordion>
+		</div>
+
+		<p class="secondary">Since 2016, I've spearheaded design teams in remote and in-person settings, steered the creation of SaaS products, built robust design systems, and contributed in building a culture where design is valued and designers can ship their best work.</p>
 		<p class="secondary">I've worked in esports, physical security, and health insurance industries. My approach involves developing user-friendly, visually appealing products guided by a research-first methodology, refining designs based on continuous user feedback.</p>
+		<p class="secondary">I believe in an open design process, anyone's ideas are valid, and use the design process to find what works and what doesn't&mdash;bringing everyone along for the process. </p>
 
 		<Block>
-			The below link contains the most comprehensive view of my design work from 2016-2023. This work will be on the web shortly.
+			The below link contains the most comprehensive view of my design work from 2016-2023. This work migrated to this website in the coming days.
 			<ButtonFancy
 				href="/Matt Richards Portfolio 2016 - 2023.pdf"
 				text="Download Matt Richards Portfolio.pdf"
@@ -86,7 +108,8 @@ $secondary-color-accent: #716FD3;
 	main {
 		margin: 140px auto;
 		padding: 1.5rem;
-		max-width: 540px;
+		max-width: 576px;
+		/* max-width: var(--site-width); */
 	}
 	h1, h2 {
 		font-style: normal;
