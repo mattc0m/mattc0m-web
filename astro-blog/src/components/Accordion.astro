@@ -1,3 +1,11 @@
+---
+import AccordionItem from '@components/AccordionItem.astro';
+
+interface Props {
+  children: typeof AccordionItem | typeof AccordionItem[]
+}
+---
+
 <div class="accordion">
   <ul class="accordion__wrapper">
     <slot />

@@ -5,6 +5,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
+    "verbatimModuleSyntax": true,
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
