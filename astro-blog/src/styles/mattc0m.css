@@ -171,6 +171,15 @@ hr {
 .screenshot-bmp { width: 994px; }
 .text-bmp { margin-top: -64px;  }
 
+// Accordion Component Overrides
+.accordion, .accordion__item, .accordion__header { background: white; }
+.accordion__header { border-bottom: 1px solid var(--hr-color); }
+.accordion__item:only-of-type .accordion__header, .accordion__item:last-of-type .accordion__header {
+  border-bottom: 1px solid var(--hr-color);
+}
+
+.panel__inner p { margin-bottom: var(--spacer-layout-small); }
+
 @media (max-width: 767px) {
   /* CSS rules for mobile resolution */
   ul, li { margin-left: 6px; padding-left: 6px; }

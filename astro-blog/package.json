@@ -30,7 +30,9 @@
     "@mantine/spotlight": "^7.3.1",
     "@mantine/tiptap": "^7.3.1",
     "@tabler/icons-react": "^2.43.0",
+    "@tiptap/core": "^2.1.13",
     "@tiptap/extension-link": "^2.1.13",
+    "@tiptap/pm": "^2.1.13",
     "@tiptap/react": "^2.1.13",
     "@tiptap/starter-kit": "^2.1.13",
     "@types/react": "^18.0.21",
@@ -39,6 +41,7 @@
     "astro-icon": "^0.8.2",
     "dayjs": "^1.11.10",
     "embla-carousel-react": "^8.0.0-rc15",
+    "haunted": "^5.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^5.3.3"
