@@ -29,7 +29,7 @@ const { title, jobTitle, dateRange, layoutType = "base"  } = Astro.props;
 		<div class:list={[ `size-${layoutType}`, 'portfolio-container' ]}>
 			<div class="portfolio-header">
 				<Header />
-				<Breadcrumb firstTitle="Portfolio" firstLink="/work/" pageTitle={title}></Breadcrumb>
+				<Breadcrumb firstTitle="Portfolio" firstLink="/portfolio/" pageTitle={title}></Breadcrumb>
 			</div>
 			<main>
 				<slot />
