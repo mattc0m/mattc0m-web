@@ -169,7 +169,9 @@ hr {
 }
 
 .screenshot-bmp { width: 994px; }
-.text-bmp { margin-top: -64px;  }
+.text-bmp { margin-top: -64px; }
+
+.portfolio-screens.mobile { --image-border-radius: 32px; } /* fixes caption lower third to crop to screenshot border radius */
 
 // Accordion Component Overrides
 .accordion, .accordion__item, .accordion__header { background: white; }

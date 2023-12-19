@@ -8,11 +8,22 @@ import PortfolioEN from '../assets/images/PortfolioCover/Employee Navigator@2x.p
 import PortfolioBrivo from '../assets/images/PortfolioCover/Brivo@2x.png'
 import PortfolioElo from '../assets/images/PortfolioCover/Elo@2x.png'
 import PortfolioShadow from '../assets/images/PortfolioCover/Shadow@2x.png'
+import Block from '@components/Block.astro';
+import ButtonFancy from '@components/ButtonFancy.astro';
 ---
 
 <Layout title="Matt Richards, Product Designer">
 	<main>
 		<section class="portfolio">
+
+			<Block>
+				While the website is being pieced together, the most complete picture of my design work is available in PDF.
+				<ButtonFancy
+					href="/Matt Richards Portfolio 2016 - 2023.pdf"
+					text="Download Matt Richards Portfolio.pdf"
+					linkTarget="_blank"
+				/>
+			</Block>
 
 			<ImageContainer
 				title="Employee Navigator"
