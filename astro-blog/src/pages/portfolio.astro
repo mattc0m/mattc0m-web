@@ -29,7 +29,7 @@ import ButtonFancy from '@components/ButtonFancy.astro';
 				title="Employee Navigator"
 				href="/portfolio/employee-navigator"
 				body="2022 - Current">
-				<Image src={PortfolioEN} alt="Thumbnail of UI Mockups from Employee Navigator" style="object-fit: cover; height: 100%; width: 100%;" />
+				<img src="/images/PortfolioCover/Employee Navigator@2x.png" />
 			</ImageContainer>
 
 			<ImageContainer
@@ -38,19 +38,19 @@ import ButtonFancy from '@components/ButtonFancy.astro';
 				body="2020 - 2022"
 				textClass="onDark"
 				>
-				<Image src={PortfolioBrivo} alt="Thumbnail of UI Mockups from Brivo" style="object-fit: cover; height: 100%; width: 100%;" />
+				<img src="/images/PortfolioCover/Brivo@2x.png" />
 			</ImageContainer>
 
-      <hr>
+			<hr>
 
-			<h2>Rest of portfolio is coming soon</h2>
+			<h3>Rest of portfolio is coming soon</h3>
 
 			<ImageContainer
 				title="Elo"
 				body="2019 - 2020"
 				textClass="onDark"
 				cssClass="isComingSoon">
-				<Image src={PortfolioElo} alt="Thumbnail of UI Mockups from Elo" style="object-fit: cover; height: 100%; width: 100%;"  />
+				<img src="/images/PortfolioCover/Elo@2x.png" />
 			</ImageContainer>
 
 			<ImageContainer
@@ -58,9 +58,10 @@ import ButtonFancy from '@components/ButtonFancy.astro';
 				body="2016 - 2019"
 				textClass="onDark"
 				cssClass="isComingSoon">
-				<Image src={PortfolioShadow} alt="Thumbnail of UI Mockups from Shadow" style="object-fit: cover; height: 100%; width: 100%;"  />
+				<img src="/images/PortfolioCover/Shadow@2x.png" />
 			</ImageContainer>
 
+			<hr>
 		</section>
 	</main>
 </Layout>
@@ -96,19 +97,19 @@ $secondary-color-accent: #716FD3;
 
 	.portfolio {
 		margin-top: 3rem;
-		a img {
+		img {
 			display: block;
 			width: 580px;
 			height: 200px;
-			border-radius: 12px;
+			border-radius: 9px;
 			overflow: hidden;
 			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.0);
 			transition: box-shadow 0.2s ease-in-out;
+			object-fit: cover; height: 100%; width: 100%;
 		}
-		a:hover img {
+		img:hover {
 			box-shadow: 0px 4px 16px rgba(11, 12, 21, 0.1);
 		}
-
 	}
 
   hr {
