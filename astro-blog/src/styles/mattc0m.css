@@ -79,6 +79,7 @@ h3 {
   font-style: normal;
   font-weight: 600;
   line-height: 28px; /* 155.556% */
+  padding-bottom: var(--spacer-ui-small);
 }
 
 p, ul, li {
