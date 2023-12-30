@@ -42,6 +42,11 @@ const { firstTitle = "Portfolio", firstLink, pageTitle = "Employee Navigator", c
     line-height: 18px;
     .icon.divider { padding: 2px 2px 0 2px; }
   }
+  &.hidefirst {
+    .text, .icon { display: none; }
+    .text.selected { display: inline-block; }
+  }
+
   .text {
     text-rendering: optimizeLegibility;
     color: var(--text-tertiary);
